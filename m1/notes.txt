@@ -1,0 +1,82 @@
+Deliverables:
+
+    Purchase the zyBook.
+    Submit the discussion prompt questions.
+    Make 3 or more posts to the discussion question.
+    Complete the interactive chapter in the zyBook: Reading 1
+    Complete the two quizzes
+    Submit the written homework by Tuesday midnight.
+
+Big O - seems to be indicative of most optimized for speed and indicates estimate O(g(n)) that is the upper bound for performance. g(n) is always the dominant term of f(n) which models the performance in time of a piece of code past a point of n = beta
+Big Theta - used when Big O and big Omega are both defined by alpha*g(n) and clearly they will use different alpha values
+Big Omega - seems to indicate lower bound of performance Omega(g(n))
+little omega
+little o
+asymptotic - doesnt cross a bound
+functional
+correctness
+pre-condition
+post-condition
+loop invariant
+
+The discussion question is: 
+
+ADT's - Practice separating functionality from implementation by suggesting something from your personal or work experience and describing it from both a functional (designer/user hat) and implementation (engineer/programmer hat) perspective. Using one of the examples from class, you might say: Stove: The functionality is to provide a heat source for cooking. The implementations are electric, bottled gas, and natural gas. 
+
+When you respond to at least one fellow student, identify limitations and advantages of each implementation. For example, a response to the above example might say that the price of electric is currently high but the price of gas, in either form, is very erratic. Some people may feel that electric is safer than gas, especially for gas appliances requiring a standing pilot light. Electricity and natural gas are permanent installations and do not require deliveries so there is no risk of not being able to run the stove (assuming you keep paying the bill). On the other hand, bottled gas can be used in remote areas where the other two sources may not be available. Respond to at least one different fellow student and write an ADT for their suggestion, specifying all necessary methods and spelling out the required private data.
+
+Because there are really endless aspects to a system as complicated as car. I will focus on its ability to get from point A to point B.
+
+Class Vehicle
+{
+	data
+	{
+
+		the current velocity of the vehicle, the current location of the vehicle
+	}
+	methods
+	{
+		getVelocity
+			input - none
+			precondition - none
+			process - retreive the current speed and direction of the vehicle
+			postcondition - none
+			output - returns the current velocity vector
+		getLocation
+			input - none
+			precondition - none
+			process - retreive the current location of the vehicle for a single instance of time
+			postcondition - none
+			output - returns the current location
+		drive
+			input - the desired desitnation
+			precondition - the car is healthy enough to drive
+			process - calculate a model of the drive to the desired desitnation from the current location and velocity of the vehicle
+			postcondition - none
+			output - a model of the drive
+	}
+}
+
+Masks
+functionality: reduce the probablility of transimission of germs/bacteria
+implementation: cloth masks, neck gators, medical masks, N95
+
+
+
+The prompt questions for this module are:
+
+    What is the design value in writing an ADT?
+    	Aides the designer/user hats on the use of a data structure.
+    When assessing complexity, what do we measure (or, what do we not measure)?
+    	amount of time to execute code. memory allocations/space.
+    Does an upper bound for a function apply in all cases?  Explain.
+    	no. below a value beta, the assumptions of the label g(n) break down as the complexity is erratic near the origin. 
+    Why might it be important to have different measure of complexity (e.g. upper bounds, lower bounds, …)?
+    	Upper bounds informs the worst possible efficiency while lower bounds informs the best possible efficency past a point Beta. In my work, we typically most concerned with understanding the worst case scenario to reduce latency. However, we also use many mult-threaded processes in which certain race conditions can adversely affect threads so it also is important to understand how fast another thread might run as well.
+    Under what conditions might you not be concerned about upper and lower bounds?
+    	when working near the origin or in other words with a very small data set. 
+    The lecture notes state, “Sometimes the ‘worst’ algorithm is the best choice.”  What does this mean, and how might it apply in specific situation?
+    	The label g(n) is just a represnetation and not accurate below a value beta. This was in reference to understanding the working space/domain of 'n'. if you know that you are only working in a space of 'n' where f1 is better than f2. f1 should be used even if f2 is better for another range of 'n'
+    How important is an understanding of space complexity in an era of cheap memory?
+    	It is not as important since memory is an affordable resource. What is more important is the time it takes to process. Depending on the complexity, some algorithms can quickly take an absurdly long time to execute. 
+
