@@ -1,0 +1,17 @@
+The prompt questions for this module are:
+
+    What is the design value in writing an ADT?
+    	Aides the designer/user hats on the use of a data structure.
+    When assessing complexity, what do we measure (or, what do we not measure)?
+    	amount of time to execute code. memory allocations/space.
+    Does an upper bound for a function apply in all cases?  Explain.
+    	no. below a value beta, the assumptions of the label g(n) break down as the complexity is erratic near the origin. 
+    Why might it be important to have different measure of complexity (e.g. upper bounds, lower bounds, …)?
+    	Upper bounds informs the worst possible efficiency while lower bounds informs the best possible efficency past a point Beta. In my work, we typically most concerned with understanding the worst case scenario to reduce latency. However, we also use many mult-threaded processes in which certain race conditions can adversely affect threads so it also is important to understand how fast another thread might run as well.
+    Under what conditions might you not be concerned about upper and lower bounds?
+    	when working near the origin or in other words with a very small data set. 
+    The lecture notes state, “Sometimes the ‘worst’ algorithm is the best choice.”  What does this mean, and how might it apply in specific situation?
+    	The label g(n) is just a represnetation and not accurate below a value beta. This was in reference to understanding the working space/domain of 'n'. if you know that you are only working in a space of 'n' where f1 is better than f2. f1 should be used even if f2 is better for another range of 'n'
+    How important is an understanding of space complexity in an era of cheap memory?
+    	It is not as important since memory is an affordable resource. What is more important is the time it takes to process. Depending on the complexity, some algorithms can quickly take an absurdly long time to execute. 
+
