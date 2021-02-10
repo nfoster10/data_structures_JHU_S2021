@@ -1,0 +1,38 @@
+Deliverables
+	
+    Submit the discussion prompt questions.
+    Make 3 or more posts to the discussion question.
+    Complete the interactive chapter in the zyBook: Reading 2
+    Complete the quiz
+    Submit the written homework by Tuesday midnight.
+
+    push - insert
+	pop - delete
+	empty test - check if a struct is empty
+	LIFO - last in first out
+	prefix - operations before operands
+	postfix - operations after operands
+	infix - common notation for arithmetic we are use to
+
+
+    Identify some key characteristics of stacks or stack operations.
+    	LIFO - Last In First Out. Only one item from a stack may be interfaced with at a time and it is the object that was last placed into the stack. 
+    What methods are *required* to implement a stack?
+    	push, pop, is_empty, constructor
+    What methods might be helpful in managing a stack, but are not required?You might consider methods that could be implemented as a combination of methods identified in the last question.
+    	copy, peek - both of these can be done in a series of push and pop to make copies of objects from the stack and then re-assign or place them back on the stack
+    Name an example (or two) of an application for which stacks would be helpful, and explain why. Consider real-life applications, not just classic algorithms.
+    	shirts/laundry. the last shirt folded and put onto the pile will have to be the next shirt removed. 
+    Name an example (or two) of an application for which stacks would NOT be helpful, and explain why.  Consider real-life applications, not just classic algorithms.
+    	Any queue...in a queue, typically LIFO is undersirable. Instead, it is preferred to service the object in the queue that has been in the queue longest
+    Have you used prefix or postfix notation in the past? In what context? Did you find it useful?
+    	I personally have never used prefix/postfix notation in the past. 
+    What are some pros and cons of choosing to implement a stack using an array versus a linked implementation?
+    	an array allows for random access which can be exploited by a program. however, an array is of static size which means the programmer must anticipate size needs. it also means that the array is always the same size regardless of the level of usage. this may also make it hard to determine which parts of the array are actually full. 
+
+
+
+Complexity - Your employer, SGA (Secretive government Agency) want you to develop an encryption program. After doing some research you have two candidate algorithms. According to your research, Algorithm 1 has cost Θ( n cubed
+), while algorithm 2 is listed as Ο( n to the power of 4 ) and Ω( n squared ). Which one do you choose? How do you decide?
+
+	i believe the correct is that you don't decide and your choice is really dicated by the needs of SGA. If reliable performance in any situation is more important, then algorithm 1 is clearly the right choice because the same performance can always be expected. If the algorithm is expected to be used in only certain situation under ideal conditions, algorithm 2 may be more prefferable because of its best case performance. in my experience, reliability in performance far out-weighs the risk of degraded variable performance. Knowing your weakness is nearly as good as not having any weaknesses.
