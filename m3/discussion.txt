@@ -1,0 +1,7 @@
+    1. Describe a scenario where you see recursion at play in your daily life.  What are some of the key features of this process or activity that make it recursive; reflect on the defining characteristics in the lecture.  For each example, how is this different from an iterative process.
+
+    2. Describe a second and different scenario where you see recursion at play in your daily life.  What are some of the key features of this process or activity that make it recursive; reflect on the defining characteristics in the lecture.  For each example, how is this different from an iterative process.
+
+    3. Are there any scenarios you can envision in which recursion would really be impossible, that the process is so iterative that you could not look at it recursively at all?
+
+    4. What are some good, practical ways to organize your thoughts and ideas when working with recursion to manage the process a little more easily

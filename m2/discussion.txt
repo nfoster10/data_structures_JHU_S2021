@@ -1,15 +1,21 @@
 
-    Identify some key characteristics of stacks or stack operations.
+    1. key stack characteristics:
     	LIFO - Last In First Out. Only one item from a stack may be interfaced with at a time and it is the object that was last placed into the stack. 
-    What methods are *required* to implement a stack?
+
+    2. required strack fxns:
     	push, pop, is_empty, constructor
-    What methods might be helpful in managing a stack, but are not required?You might consider methods that could be implemented as a combination of methods identified in the last question.
+
+   3. other helpful not necessary fxns for stack:
     	copy, peek - both of these can be done in a series of push and pop to make copies of objects from the stack and then re-assign or place them back on the stack
-    Name an example (or two) of an application for which stacks would be helpful, and explain why. Consider real-life applications, not just classic algorithms.
+
+    4. stack example:
     	shirts/laundry. the last shirt folded and put onto the pile will have to be the next shirt removed. 
-    Name an example (or two) of an application for which stacks would NOT be helpful, and explain why.  Consider real-life applications, not just classic algorithms.
+
+    5. example that stack would not work:
     	Any queue...in a queue, typically LIFO is undersirable. Instead, it is preferred to service the object in the queue that has been in the queue longest
-    Have you used prefix or postfix notation in the past? In what context? Did you find it useful?
-    	I personally have never used prefix/postfix notation in the past. 
-    What are some pros and cons of choosing to implement a stack using an array versus a linked implementation?
+
+    6. examples of prefix/post fix:
+    	only in simple ways when incrementing a variable like for example ++counter or coutner ++
+
+    7. pros and cons to linked vs array implementaiton:
     	an array allows for random access which can be exploited by a program. however, an array is of static size which means the programmer must anticipate size needs. it also means that the array is always the same size regardless of the level of usage. this may also make it hard to determine which parts of the array are actually full. 

@@ -1,0 +1,57 @@
+Deliverables:
+	
+    Submit the discussion prompt questions.
+    Make 3 or more posts to the discussion question.
+    Complete the interactive chapter in the zyBook: Reading 3
+    Complete the quiz
+    Submit the written homework by Tuesday midnight.
+
+
+    Define recursion informally and give simple examples.
+    Define the three characteristics of recursion.
+    Illustrate those characteristics using a specific example of recursion.
+    Summarize how recursion works behind the scenes.
+    Trace recursive execution of an example piece of code.
+    Write recursive code to solve a simple, example problem.
+    Analyze a complex piece problem and recommend the use of recursion or iterations.
+    Apply stack concepts (Module 2) in the discussion.
+
+    The discussion question is: 
+		Suggest applications from your personal or work experience that are suitable to address with stacks. Explain why a stack is an appropriate choice. How does it exhibit the LIFO characteristic?  Respond to two fellow students on their suggested applications.  Then, select an application proposed by at least one fellow student (to whom you have not previously replied on this discussion question) and argue that an array implementation of a stack is a good or poor choice of implementation.
+			A suitable example would be packing any kind of bag, getting dressed or even constructing/deconstructing any kind of physical object. I enjoy drinking soda so I am going to go with the example of a hockey bag. When you get off the ice, the first thing off is always your gloves, followed by your helmet, then your jersey, and so forth. That is the opposite direction in which you would get dressed so you can think of yourself and the bag as two stacks.
+
+
+
+Part A
+
+    Concept 
+    Factorial Example
+    Towers Of Hanoi
+
+Part B
+
+    Fibonacci Sequence Example
+    Redundancy 
+    Pow(x,N)
+    Binary Search
+    Max Array
+    Kth Smallest Value
+
+Part C
+
+    Motivation
+    Supporting Recursion
+    Simulating Recursion
+    Practical Considerations
+
+
+vocab:
+	stopping case - trivial, non recursive
+
+	recursive characteristic
+
+	redundancy
+
+	recurrence relation
+
+	closed form solution
