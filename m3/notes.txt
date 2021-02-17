@@ -50,8 +50,10 @@ vocab:
 
 	recursive characteristic
 
-	redundancy
+	redundancy - solved to a degree by memo-ization but is generally a problem for recursion due to resource utilization
 
-	recurrence relation
+	recurrence relation - complexity is T(N) = O(N) + T(N/2)
 
 	closed form solution
+
+cost of max array for brownie points
