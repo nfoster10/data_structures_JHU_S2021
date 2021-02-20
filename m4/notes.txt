@@ -1,0 +1,34 @@
+    Define a queue and the standard methods.
+    Differentiate between the rules of the queue definition and implementation imposed restrictions.
+    Characterize problems that have a FIFO characteristic, and give examples.
+    Assess problems for appropriate use of queues, and make implementation recommendations.
+    Discuss the pros and cons, including costs, of the three array based approaches to implementing a queue.
+    Write a Queue ADT and Implement queues using arrays.
+    Define a list and the standard methods.
+    Differentiate between the rules of the list definition and implementation imposed restrictions.
+    Characterize problems are appropriate to using a general list and a sorted list, and give examples.
+    Assess problems for appropriate use of lists, and make implementation recommendations.
+    Write a List ADT and implement lists using plain arrays, arrays using a “marked delete” strategy, and dynamic references (links).
+    Rewrite list methods by imposing access restrictions, to obtain the standard stack and queue methods.
+    Implement stacks and queues with dynamic references.
+    Discuss the pros and cons, including costs, of each implementation type and each access restriction type and match to applications.
+    Apply recursion concepts (Module 3) in the discussion
+
+deliverables:
+    Submit the discussion prompt questions.
+    Make 3 or more posts to the discussion question.
+    Complete the interactive chapter in the zyBook: Reading 4
+    Complete the two quizzes.
+    Submit the written homework by Tuesday midnight.
+
+LIFO
+
+Header
+
+List Head
+
+List Tail
+
+ordered List
+
+general list

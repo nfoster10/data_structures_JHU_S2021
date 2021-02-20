@@ -1,10 +1,10 @@
-    1. 
+    1. Describe a scenario where you see recursion at play in your daily life.  What are some of the key features of this process or activity that make it recursive; reflect on the defining characteristics in the lecture.  For each example, how is this different from an iterative process.
     	Getting dressed is the easiest example. Your underwear will always be generally the first thing you put on when getting dressed and last thing off when getting undressed. a hat will be the last thing put on and the first thing removed. one dressed, you would not iterate in the same fashion to get undressed. random access to clothing is also undesirable. it probably means you have holes in your clothes.
-    2. 
+    2. Describe a second and different scenario where you see recursion at play in your daily life.  What are some of the key features of this process or activity that make it recursive; reflect on the defining characteristics in the lecture.  For each example, how is this different from an iterative process.
     	Constructing and deconstructing a tent. First you stand up your poles. then wrap it with canvas and lastly nail down your spikes. while a 
-    3.
+    3. Are there any scenarios you can envision in which recursion would really be impossible, that the process is so iterative that you could not look at it recursively at all?
     	recursion really would not make sense for a counter or timer.
-    4. 
+    4. What are some good, practical ways to organize your thoughts and ideas when working with recursion to manage the process a little more easily
     	i find that using an indentation method has worked best for me through the hw along with starting multiple threads which ends up just looking a whole separate problem works best for me when stepping through recusrive processing. 
 
     	as far as writing a recursive algo, i find it always best to start with defining a base case and then widdling down to it from the original problem.
