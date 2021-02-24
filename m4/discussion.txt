@@ -1,13 +1,19 @@
+	A lot of things have a FIFO characteristic. What is something that does not have a FIFO characteristic that you could still effectively manage with a queue?
 
-    A lot of things have a FIFO characteristic. What is something that does not have a FIFO characteristic that you could still effectively manage with a queue?
     What are some of the key distinguishing features of a list?  Under what conditions would these be useful?
+    	See slide
     Should a list ADT include hints or references to the list implementation?
+    	No
     What might you consider to be a nice-to-have in a list ADT (not necessary, but potentially useful)?
+    	See slide
     When might the implementation details of a list be an important consideration?
+    	total size
     List some pros and cons of an array implementation of a list.
+    	
     List some pros and cons of a linked implementation of a list.
 
 
 The discussion question is: 
 
 Recursion - Identify an example from your work experience or everyday life that is iterative or at least implemented iteratively, and show how it could be implemented recursively. Be sure to review the problems in Chapter 3 first to avoid replicating something from the book.
+
