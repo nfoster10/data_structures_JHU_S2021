@@ -48,10 +48,15 @@ public class ConvertPrefixToPostfix
 	private static void convertFile(BufferedReader prefixEqList)
 	{
 		String inputPrefixEq = null;
-
-		while ((inputPrefixEq = prefixEqList.readLine().trim()) != null)
+		try{
+			while ((inputPrefixEq = prefixEqList.readLine().trim()) != null)
+			{
+				convertEquation(inputPrefixEq);
+			}
+		}
+		catch (IOException e)
 		{
-			convertEquation(inputPrefixEq);
+			System.out.println(e);
 		}
 	}
 

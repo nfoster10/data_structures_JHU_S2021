@@ -1,7 +1,7 @@
 public class Stack implements Stack_I
 {
 	private int length;
-	private [] Object stack;
+	private Object [] stack;
 
 	/*
 		input
@@ -29,24 +29,24 @@ public class Stack implements Stack_I
 		this.stack = new Object[stackSize];
 	}
 
-	Object pop()
+	public Object pop()
 	{
 		return this.stack[this.length--];
 	}
 
-	Object peak()
+	public Object peak()
 	{
 		return this.stack[this.length - 1];
 	}
 
-	boolean push(Object inputObject);
+	public boolean push(Object inputObject)
 	{
 		this.stack[this.length] = inputObject;
 		this.length++;
 		return (length > 0);
 	}
 
-	boolean isEmpty()
+	public boolean isEmpty()
 	{
 		return !(length > 0);
 	}
