@@ -3,7 +3,7 @@
 import java.io.*;
 import java.util.*;
 
-public class ConvertPrefixToPostfix.java
+public class ConvertPrefixToPostfix
 {
 
 
@@ -37,8 +37,45 @@ public class ConvertPrefixToPostfix.java
 
 	}
 
+
+	/*
+	input
+	precondition
+	process
+	postcondition
+	output
+	*/
 	private static void convertFile(BufferedReader prefixEqList)
 	{
+		String inputPrefixEq = null;
 
+		while ((inputPrefixEq = prefixEqList.readLine().trim()) != null)
+		{
+			convertEquation(inputPrefixEq);
+		}
+	}
+
+	/*
+	input
+	precondition
+	process
+	postcondition
+	output
+	*/
+	private static void convertEquation(String inputPrefixEq)
+	{
+		PrefixToPostfixConverter converter = new PrefixToPostfixConverter();
+		String outputPostfix = new String();
+
+		if(converter.prefixToPostfix(inputPrefixEq, outputPostfix))
+		{
+			System.out.println("\ninput: " + inputPrefixEq);
+			System.out.println("\noutput: " + outputPostfix);
+		}
+		else
+		{	
+			System.out.println("\ninput: invalid equation");
+			System.out.println("\noutput: " + inputPrefixEq);
+		}
 	}
 }
