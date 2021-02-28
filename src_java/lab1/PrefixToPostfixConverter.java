@@ -1,7 +1,7 @@
 public class PrefixToPostfixConverter
 {
 	private static final char [] operators 
-		= {'-', '+', '/', '*', '^'}; 
+		= {'-', '+', '/', '*', '$'}; 
 	/*
 	input
 	precondition
@@ -9,13 +9,13 @@ public class PrefixToPostfixConverter
 	postcondition
 	output
 	*/
-	public boolean prefixToPostfix(String inputEquation, String outputEquation)
+	public boolean prefixToPostfix(String inputEquation, StringBuilder outputEquation)
 	{
-		boolean success = false;
+		boolean success = true;
 		Stack alpha = new Stack(inputEquation.length());
 		char inputChar;
-		char pop1;
-		char pop2;
+		Character pop1;
+		Character pop2;
 
 		for (int i = inputEquation.length() - 1; i >= 0; i--)
 		{
@@ -23,22 +23,32 @@ public class PrefixToPostfixConverter
 			if (isOperator(inputChar))
 			{
 				if (alpha.isEmpty())
+				{	
+					success = false;
 					break;
+				}
 				else
-					pop1 = (char) alpha.pop();
+				{	
+					//System.out.println("AAA");
+					pop1 = (Character) alpha.pop();
+				}
+
 				if (alpha.isEmpty())
 				{
-					success = true; //boundary condition acheived, last operator and operand
-					outputEquation = outputEquation + String.format("%c%c",pop1,inputChar);
+					outputEquation.insert(0,pop1.charValue());
+					outputEquation.append(String.format("%c",inputChar));
+					//break;
 				}
 				else
 				{
-					pop2 = (char) alpha.pop();
-					outputEquation = outputEquation + String.format("%c%c%c",pop1,pop2,inputChar);
+					pop2 = (Character) alpha.pop();
+					//System.out.println(pop1);
+					outputEquation.append(String.format("%c%c%c",pop2.charValue(),pop1.charValue(),inputChar));
 				}
 			}
 			else
 			{
+				//System.out.println("BBB");
 				alpha.push(inputChar);
 			}
 		}	

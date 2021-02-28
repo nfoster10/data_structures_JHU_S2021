@@ -31,7 +31,9 @@ public class Stack implements Stack_I
 
 	public Object pop()
 	{
-		return this.stack[this.length--];
+		length--;
+		//System.out.println("CCC" + length);
+		return this.stack[this.length];
 	}
 
 	public Object peak()

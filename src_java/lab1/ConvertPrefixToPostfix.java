@@ -70,17 +70,17 @@ public class ConvertPrefixToPostfix
 	private static void convertEquation(String inputPrefixEq)
 	{
 		PrefixToPostfixConverter converter = new PrefixToPostfixConverter();
-		String outputPostfix = new String();
+		StringBuilder outputPostfix = new StringBuilder();
 
 		if(converter.prefixToPostfix(inputPrefixEq, outputPostfix))
 		{
 			System.out.println("\ninput: " + inputPrefixEq);
-			System.out.println("\noutput: " + outputPostfix);
+			System.out.println("output: " + outputPostfix);
 		}
 		else
 		{	
 			System.out.println("\ninput: invalid equation");
-			System.out.println("\noutput: " + inputPrefixEq);
+			System.out.println("output: $" + inputPrefixEq + "$");
 		}
 	}
 }
