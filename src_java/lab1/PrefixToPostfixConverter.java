@@ -14,20 +14,21 @@ public class PrefixToPostfixConverter
 	postcondition - the output stack now contains the converted postfix equation
 	output - true if successful, false if failed to convert
 	*/
-	public boolean prefixToPostfix(String inputEquation, Stack outputEquation)
+	public boolean prefixToPostfix(Stack inputEquation, Stack outputEquation)
 	{
 		boolean success = true;
-		Stack symbolStack = new Stack(inputEquation.length());
+		Stack symbolStack = new Stack();
 		String inputChar;
 		String pop1;
 		String pop2;
 
-		if(inputEquation.length() == 0) return success = false;
+		if(inputEquation.isEmpty()) return success = false;
 
-		for (int i = inputEquation.length() - 1; i >= 0; i--)
+		while(inputEquation.isEmpty() == false)
 		{
-			inputChar = Character.toString(inputEquation.charAt(i));
-
+			inputChar = (String) inputEquation.pop();
+			///System.out.println("\tinconverter: >" + inputChar + "<");
+			
 			if(isOperator(inputChar))
 			{
 				if(symbolStack.isEmpty()==false) pop1 = (String) symbolStack.pop();

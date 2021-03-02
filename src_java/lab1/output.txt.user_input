@@ -1,29 +1,26 @@
 
-input: >aaaaaa<
+input: aaaaaa
 output: invalid equation
 
-input: ><
-output: invalid equation
-
-input: >------<
+input: ------
 output: invalid equation
 
 input: a
 output: a
 
-input: >-<
+input: -
 output: invalid equation
 
-input: >-a<
+input: -a
 output: invalid equation
 
-input: >a-<
+input: a-
 output: invalid equation
 
-input: >--aa<
+input: --aa
 output: invalid equation
 
-input: >aa--<
+input: aa--
 output: invalid equation
 
 input: --abc
@@ -32,5 +29,5 @@ output: ab-c-
 input: -*+AB+$C-DEFG
 output: AB+CDE-$F+*G-
 
-input: >-*+AB+$C-DEF<
+input: -*+AB+$C-DEF
 output: invalid equation

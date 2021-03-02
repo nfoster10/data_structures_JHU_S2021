@@ -13,7 +13,7 @@ public class Stack implements Stack_I
 	Stack()
 	{
 		this.length = 0;
-		this.stack = new Object[10];
+		this.stack = new Object[30];
 	}
 
 	/*
@@ -50,5 +50,17 @@ public class Stack implements Stack_I
 	public boolean isEmpty()
 	{
 		return !(length > 0);
+	}
+
+	public String toString()
+	{
+		String stackString = "";
+		for(int i = 0; i < length; i++)
+		{
+			stackString = stackString + stack[i];
+			///System.out.println(stackString);
+		}
+
+		return stackString;
 	}
 }
