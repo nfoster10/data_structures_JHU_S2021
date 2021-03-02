@@ -1,12 +1,8 @@
-//holds the main fxn
-
 import java.io.*;
 import java.util.*;
 
 public class ConvertPrefixToPostfix
 {
-
-
 	public static void main(String [] args)
 	{
 		Scanner consoleInput = new Scanner(System.in); 
@@ -14,7 +10,7 @@ public class ConvertPrefixToPostfix
 		BufferedReader prefixEqList = null;
 		String prefixEqListPath = null;
 
-		while(true) //prompt for file path until file found
+		while(true)
 		{
 			try{
 				System.out.printf("\n\nEnter path to input prefix equation list or type a prefix equation or q to quit: ");
@@ -48,10 +44,10 @@ public class ConvertPrefixToPostfix
 	{
 		String inputPrefixEq = null;
 		try{
-			while ((inputPrefixEq = prefixEqList.readLine().trim()) != null 
-				&& inputPrefixEq.length() > 2)
+			while ((inputPrefixEq = prefixEqList.readLine()) != null)
+				//&& inputPrefixEq.length() > 2)
 			{
-				convertEquation(inputPrefixEq);
+				convertEquation(inputPrefixEq.trim());
 			}
 		}
 		catch (IOException e)
@@ -71,6 +67,7 @@ public class ConvertPrefixToPostfix
 	{
 		PrefixToPostfixConverter converter = new PrefixToPostfixConverter();
 		StringBuilder outputPostfix = new StringBuilder();
+		//StringBuilder used since String cannot be altered
 
 		if(converter.prefixToPostfix(inputPrefixEq, outputPostfix))
 		{
