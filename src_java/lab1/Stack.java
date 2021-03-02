@@ -32,7 +32,6 @@ public class Stack implements Stack_I
 	public Object pop()
 	{
 		length--;
-		//System.out.println("CCC" + length);
 		return this.stack[this.length];
 	}
 

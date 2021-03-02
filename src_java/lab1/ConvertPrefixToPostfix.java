@@ -17,8 +17,9 @@ public class ConvertPrefixToPostfix
 		while(true) //prompt for file path until file found
 		{
 			try{
-				System.out.printf("\n\nEnter path to input prefix equation list or type a prefix equation: ");
-				prefixEqListPath = consoleInput.nextLine().trim();
+				System.out.printf("\n\nEnter path to input prefix equation list or type a prefix equation or q to quit: ");
+				if((prefixEqListPath = consoleInput.nextLine().trim()).equals("q"))
+					return;
 
 				inputFile = new File(prefixEqListPath);
 
@@ -26,12 +27,10 @@ public class ConvertPrefixToPostfix
 				System.out.printf("\n\nFile found.\n");
 
 				convertFile(prefixEqList);
-				//does loop continue? yes
 			}
 			catch(FileNotFoundException e0) {
-				System.out.printf("\n\tFile not found!");
+				System.out.printf("\n\tFile not found! Treat as input equation.");
 				convertEquation(prefixEqListPath);
-				//does loop continue? yes
 			}
 		}
 
@@ -49,7 +48,8 @@ public class ConvertPrefixToPostfix
 	{
 		String inputPrefixEq = null;
 		try{
-			while ((inputPrefixEq = prefixEqList.readLine().trim()) != null)
+			while ((inputPrefixEq = prefixEqList.readLine().trim()) != null 
+				&& inputPrefixEq.length() > 2)
 			{
 				convertEquation(inputPrefixEq);
 			}
@@ -79,8 +79,8 @@ public class ConvertPrefixToPostfix
 		}
 		else
 		{	
-			System.out.println("\ninput: invalid equation");
-			System.out.println("output: $" + inputPrefixEq + "$");
+			System.out.println("\ninput: >" + inputPrefixEq + "<");
+			System.out.println("output: invalid equation");
 		}
 	}
 }
