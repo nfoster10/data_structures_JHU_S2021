@@ -51,7 +51,6 @@ public class PrefixToPostfixConverter
 		return success = symbolStack.isEmpty(); //extra operand
 	}
 
-
 	/*
 	input - a single character as a String
 	precondition - none
