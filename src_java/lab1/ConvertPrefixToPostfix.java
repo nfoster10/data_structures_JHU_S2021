@@ -1,3 +1,11 @@
+/*
+ConvertPrefixToPostix takes either a file or an equation from the user 
+and attempts to convert it to a postfix equation. if successful, it prints
+the original and converted equation. If not successful, an error message 
+and the original equation are printed. This contains the main function 
+and preps user input for processing by PrefixToPostfixConverter.
+*/
+
 import java.io.*;
 import java.util.*;
 
@@ -34,11 +42,11 @@ public class ConvertPrefixToPostfix
 
 
 	/*
-	input
-	precondition
-	process
-	postcondition
-	output
+	input - a list of prefix equations separated by new lines delimiters
+	precondition - the file exists
+	process - break the file down into separate lines for conversion
+	postcondition - none
+	output - none
 	*/
 	private static void convertFile(BufferedReader prefixEqList)
 	{
@@ -56,17 +64,16 @@ public class ConvertPrefixToPostfix
 	}
 
 	/*
-	input
-	precondition
-	process
-	postcondition
-	output
+	input - a single prefix equation
+	precondition - none
+	process - convert input equation and print result
+	postcondition - result printed
+	output - none
 	*/
 	private static void convertEquation(String inputPrefixEq)
 	{
 		PrefixToPostfixConverter converter = new PrefixToPostfixConverter();
 		Stack outputPostfix = new Stack();
-		//StringBuilder used since String cannot be altered
 
 		if(converter.prefixToPostfix(inputPrefixEq, outputPostfix))
 		{

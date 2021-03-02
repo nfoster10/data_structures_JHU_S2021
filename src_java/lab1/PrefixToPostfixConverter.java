@@ -1,13 +1,18 @@
+/*
+PrefixToPostfixConverter converts a given prefix equation to a postifx equation
+*/
 public class PrefixToPostfixConverter
 {
+	//list of valid operations
 	private static final String [] operators 
 		= {"-", "+", "/", "*", "$"}; 
 	/*
-	input
-	precondition
-	process
-	postcondition
-	output
+	input - input prefix equation to be converted into a postfix equation and 
+		returned to the caller via the output equation
+	precondition - input equation is a single valid prefix equation
+	process - convert prefix equation to postfix equation if possible
+	postcondition - the output stack now contains the converted postfix equation
+	output - true if successful, false if failed to convert
 	*/
 	public boolean prefixToPostfix(String inputEquation, Stack outputEquation)
 	{
@@ -47,11 +52,11 @@ public class PrefixToPostfixConverter
 
 
 	/*
-	input
-	precondition
-	process
-	postcondition
-	output
+	input - a single character as a String
+	precondition - none
+	process - compare input against list of valid operators
+	postcondition - none
+	output - return true if input found to be valid operator
 	*/
 	private static boolean isOperator(String inputChar)
 	{

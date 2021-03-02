@@ -4,11 +4,11 @@ public class Stack implements Stack_I
 	private Object [] stack;
 
 	/*
-		input
-		precondition
-		process
-		postcondition
-		output
+		input - none
+		precondition - none
+		process - construct Stack of default size and 0 length
+		postcondition - empty Stack created
+		output - new Stack
 	*/
 	Stack()
 	{
@@ -17,11 +17,11 @@ public class Stack implements Stack_I
 	}
 
 	/*
-		input
-		precondition
-		process
-		postcondition
-		output
+		input - stack size
+		precondition - none
+		process - construct Stack of input stack size and length 0
+		postcondition - empty Stack created
+		output - new Stack
 	*/
 	Stack(int stackSize)
 	{
