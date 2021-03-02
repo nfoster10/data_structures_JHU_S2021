@@ -21,9 +21,12 @@ public class ConvertPrefixToPostfix
 		while(true)
 		{
 			try{
-				System.out.printf("\n\nEnter path to input prefix equation list or type a prefix equation or q to quit: ");
+				System.out.printf("\n\nEnter path to input prefix equation list or q to quit: ");
 				if((prefixEqListPath = consoleInput.nextLine().trim()).equals("q"))
+				{
+					System.out.println("\nOutput sent to ./output.txt");
 					return;
+				}
 
 				inputFile = new File(prefixEqListPath);
 
@@ -75,15 +78,25 @@ public class ConvertPrefixToPostfix
 		PrefixToPostfixConverter converter = new PrefixToPostfixConverter();
 		Stack outputPostfix = new Stack();
 
-		if(converter.prefixToPostfix(inputPrefixEq, outputPostfix))
+		try(PrintWriter dataOutput = new PrintWriter(new FileWriter("output.txt", true)))
 		{
-			System.out.println("\ninput: " + inputPrefixEq);
-			System.out.println("output: " + outputPostfix.peak());
+			if(converter.prefixToPostfix(inputPrefixEq, outputPostfix))
+			{
+				///System.out.println("\ninput: " + inputPrefixEq);
+				///System.out.println("output: " + outputPostfix.peak());
+				dataOutput.println("\ninput: " + inputPrefixEq);
+				dataOutput.println("output: " + outputPostfix.peak());
+			}
+			else
+			{	
+				///System.out.println("\ninput: >" + inputPrefixEq + "<");
+				///System.out.println("output: invalid equation");
+				dataOutput.println("\ninput: >" + inputPrefixEq + "<");
+				dataOutput.println("output: invalid equation");
+			}
 		}
-		else
-		{	
-			System.out.println("\ninput: >" + inputPrefixEq + "<");
-			System.out.println("output: invalid equation");
+		catch (IOException e){
+			System.out.println(e);
 		}
 	}
 }
