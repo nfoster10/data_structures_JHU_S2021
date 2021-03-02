@@ -1,5 +1,5 @@
 /*
-PrefixToPostfixConverter converts a given prefix equation to a postifx equation
+PrefixToPostfixConverter converts a given prefix equation to a postfix
 */
 public class PrefixToPostfixConverter
 {
