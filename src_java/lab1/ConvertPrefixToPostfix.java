@@ -45,7 +45,6 @@ public class ConvertPrefixToPostfix
 		String inputPrefixEq = null;
 		try{
 			while ((inputPrefixEq = prefixEqList.readLine()) != null)
-				//&& inputPrefixEq.length() > 2)
 			{
 				convertEquation(inputPrefixEq.trim());
 			}
@@ -66,13 +65,13 @@ public class ConvertPrefixToPostfix
 	private static void convertEquation(String inputPrefixEq)
 	{
 		PrefixToPostfixConverter converter = new PrefixToPostfixConverter();
-		StringBuilder outputPostfix = new StringBuilder();
+		Stack outputPostfix = new Stack();
 		//StringBuilder used since String cannot be altered
 
 		if(converter.prefixToPostfix(inputPrefixEq, outputPostfix))
 		{
 			System.out.println("\ninput: " + inputPrefixEq);
-			System.out.println("output: " + outputPostfix);
+			System.out.println("output: " + outputPostfix.peak());
 		}
 		else
 		{	

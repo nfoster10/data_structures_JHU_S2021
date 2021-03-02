@@ -9,7 +9,7 @@ public class PrefixToPostfixConverter
 	postcondition
 	output
 	*/
-	public boolean prefixToPostfix(String inputEquation, StringBuilder outputEquation)
+	public boolean prefixToPostfix(String inputEquation, Stack outputEquation)
 	{
 		boolean success = true;
 		Stack symbolStack = new Stack(inputEquation.length());
@@ -41,7 +41,7 @@ public class PrefixToPostfixConverter
 				else return success = false; //invalid input
 			}
 		}
-		outputEquation.append(symbolStack.pop());	
+		outputEquation.push(symbolStack.pop());	
 		return success = symbolStack.isEmpty(); //extra operand
 	}
 
