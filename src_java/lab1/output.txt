@@ -1,0 +1,66 @@
+
+input: -+ABC
+output: AB+C-
+
+input: -A+BC
+output: ABC+-
+
+input: $+-ABC+D-EF
+output: AB-C+DEF-+$
+
+input: -*A$B+C-DE*EF
+output: ABCDE-+$*EF*-
+
+input: **A+BC+C-BA
+output: ABC+*CBA-+*
+
+input: /A+BC+C*BA
+output: invalid equation
+
+input: *-*-ABC+BA
+output: invalid equation
+
+input: /+/A-BC-BA
+output: invalid equation
+
+input: *$A+BC+C-BA
+output: ABC+$CBA-+*
+
+input: //A+B0-C+BA
+output: invalid equation
+
+input: *$A^BC+C-BA
+output: invalid equation
+
+input: aaaaaa
+output: invalid equation
+
+input: ------
+output: invalid equation
+
+input: a
+output: a
+
+input: -
+output: invalid equation
+
+input: -a
+output: invalid equation
+
+input: a-
+output: invalid equation
+
+input: --aa
+output: invalid equation
+
+input: aa--
+output: invalid equation
+
+input: --abc
+output: ab-c-
+
+input: -*+AB+$C-DEFG
+output: AB+CDE-$F+*G-
+
+input: -*+AB+$C-DEF
+output: invalid equation

@@ -1,20 +1,19 @@
-	1.
+	A lot of things have a FIFO characteristic. What is something that does not have a FIFO characteristic that you could still effectively manage with a queue?
 		a container of produce. the first piece of produce isnt necessarily the first piece of produce out or even the last. however, if we don't care about tracking that specific piece of produce and instead just the total amount of produce, then a queue will be sufficient to manage the container of produce.
-	
-	2.
+    What are some of the key distinguishing features of a list?  Under what conditions would these be useful?
     	a list is an ordered collection of data that can have inserts or deletes at any point the list. order is also determined by the application. this can be useful for maintaining any number of things especially when FIFO and LIFO characteristics don't apply such as picking teams for dodge ball.
-    
-    3.
+    Should a list ADT include hints or references to the list implementation?
     	No. Implementation should be separate from ADT although they implementation may force some restrictions/limitations.
-   
-   4.
+    What might you consider to be a nice-to-have in a list ADT (not necessary, but potentially useful)?
     	a peak and copy function. a copy function can be particularly useful because it allows the programmer to create a second copy of the list that may be manipulated in convienient ways that may not necessarily be desirable for the actual list.
-    
-    5.
+    When might the implementation details of a list be an important consideration?
     	if creating a large list, you will want to be very careful to decide the size allocation. I recently saw this in my work where an array was to small and lead to data corruption. this was extremely hard to debug and had major ramifications to the program.
-    
-    6.
+    List some pros and cons of an array implementation of a list.
     	arrays allow for random access and faster searching since a list is ordered. however it is much more difficult to deal with memory. often there can be empty/unsed/gargbage nodes that much be managed which can be very complicated.
-	
-	7. 
+    List some pros and cons of a linked implementation of a list.
     	a linked list frequently allows for simpler list manipulation when deleting or inserting items since only pointers to the next and (if double linked) previous nodes must be updated. however, this need for sequential access can also be taxing on the system when performing searches.
+
+The discussion question is: 
+
+Recursion - Identify an example from your work experience or everyday life that is iterative or at least implemented iteratively, and show how it could be implemented recursively. Be sure to review the problems in Chapter 3 first to avoid replicating something from the book.
+

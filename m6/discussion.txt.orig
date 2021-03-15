@@ -1,0 +1,16 @@
+Jot down short answers for each prompt question as you go along. Review and update your answers after finishing and submit before Tuesday midnight. Click on "Module 6 - Discussion Prompt Questions" above to submit.   
+
+The prompt questions for this module are:
+
+    What are some scenarios in which you are likely to encounter a sparse matrix?
+    Why is it important to select the right data structure for storing and manipulating sparse matrices?  What are the important factors to consider?
+    What are the pros and cons of using a linked implementation of a sparse matrix, as opposed to an array-based implementation?
+
+1.
+I encountered sparse matricies when representing radar returns in college. it was found that a sparse matrix represnetation of a radar return was enough to extract the defining features of an object. 
+
+2.
+For this impementation, the data was stored in a flat array so it made sense to use a flat array for the sparse matrix for extraction. A queue would be good for processing this data also since you want to process all the data and it makes sense to start with the oldest. the biggest factor to consider will be the data rate or size as well as how it much be processed. in my example, time is the most important.
+
+3.
+a linked implementation would make for low cost changes to the sparse matrix. this is very helpful if the sparse matrix is expected to change. in the aforementioned exmaple, a randomized sparse matrix was always used. the linked implementation will also allow for more dynamic size which is beneficial for applications expecting variable data rates. the array implementation will always be a constant size.

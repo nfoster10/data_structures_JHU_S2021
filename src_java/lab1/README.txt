@@ -12,3 +12,19 @@ Commane Line Usage: $ java ConvertPrefixToPostfix <input_file>
 Code output sent to output.txt
 
 Debug lines are commented out with "///"
+
+Files Included:
+ConvertPrefixToPostfix.class
+ConvertPrefixToPostfix.java
+Lab1_Report_NFoster.pdf
+output.txt.Required_Input
+output.txt.user_input
+PrefixToPostfixConverter.class
+PrefixToPostfixConverter.java
+Required_Input.txt
+Stack.class
+Stack_I.class
+Stack_I.java
+Stack.java
+user_input.txt
+                                                          
