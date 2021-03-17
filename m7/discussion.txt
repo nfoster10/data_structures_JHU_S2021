@@ -1,0 +1,10 @@
+1.
+    	graphs show relationships between nodes or verticies so it would be important to determine if these relationsips need to be weighted.
+2.
+    	Probably more efficient insertions and less efficient searching
+3.
+    	The major proble with an array would be size changes to the graph if nodes are constantly changing. A geographic problem, this wouldn't be a huge problem since land masses are not frequently appearing and disappearing. However a social network modedled by a graph may have frequent additions or removal of nodes depending on the person.
+4.
+    	A computer network would be a good example for using a graph representation. It can show which nodes are able to communicate and help eliminate latencies. In my work, we are installing a firewall and a graph representation is very helpful for understanding the impacts of the firewall.
+5.
+    	Graphs are good candidates for recursion as each node can be generally treated the same until every node has been visited. however this does lead to frequent searches and upkeep to confirm whether or not has laready been visited or discovered.
