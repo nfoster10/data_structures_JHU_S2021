@@ -6,6 +6,7 @@ public class PrefixToPostfixConverter
 	//list of valid operations
 	private static final String [] operators 
 		= {"-", "+", "/", "*", "$"}; 
+
 	/*
 	input - input prefix equation to be converted into a postfix equation and 
 		returned to the caller via the output equation
@@ -13,7 +14,7 @@ public class PrefixToPostfixConverter
 	process - convert prefix equation to postfix equation if possible
 	postcondition - the output stack now contains the converted postfix equation
 	output - true if successful, false if failed to convert
-	*/
+	*//*
 	public boolean prefixToPostfix(Stack inputEquation, Stack outputEquation)
 	{
 		boolean success = true;
@@ -49,12 +50,19 @@ public class PrefixToPostfixConverter
 		}
 		outputEquation.push(symbolStack.pop());	
 		return success = symbolStack.isEmpty(); //extra operand
-	}
+	}*/
 
-	/**/
-	public boolean recursivePrefixToPostfix(Stack inputEquation, Stack outputEquation)
+	/*
+	input - input prefix equation to be converted into a postfix equation and 
+		returned to the caller via the output equation
+	precondition - input equation is a single valid prefix equation
+	process - convert prefix equation to postfix equation if possible
+	postcondition - the output stack now contains the converted postfix equation
+	output - true if successful, false if failed to convert
+	*/
+	public int recursivePrefixToPostfix(Stack inputEquation, Stack outputEquation)
 	{
-		boolean success = true;
+		int success = 0;
 		String inputChar;
 		String pop1 = null;
 		String pop2 = null;
@@ -72,21 +80,21 @@ public class PrefixToPostfixConverter
 				if(pop2 != null)
 					outputEquation.push(String.format("%s%s%s",pop1, pop2, inputChar));
 				else
-					return success = false;
+					return success = 1;
 			}
 			else
 			{
 				if(Character.isLetter(inputChar.charAt(0)))
 					outputEquation.push(inputChar);
 				else
-					return success = false;
+					return success = 2;
 			}
 
 			success = recursivePrefixToPostfix(inputEquation, outputEquation);		
 
 		}
 
-		return success = outputEquation.getLength() == 1? success : false;
+		return success = outputEquation.getLength() == 1 || success > 0? success : 3;
 	}
 
 	/*

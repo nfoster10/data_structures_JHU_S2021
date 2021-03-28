@@ -44,7 +44,21 @@ public class Stack implements Stack_I
 	{
 		this.stack[this.length] = inputObject;
 		this.length++;
-		return (length > 0);
+		Object [] newStack = null;
+
+		if (this.length == this.stack.length)
+		{
+			newStack = new Object[length * 2];
+
+			for(int i = 0; i < this.stack.length; i++)
+			{
+				newStack[i] = this.stack[i];
+			}
+
+			this.stack = newStack;
+		}
+
+		return newStack == null;
 	}
 
 	public boolean isEmpty()

@@ -9,6 +9,8 @@ IDE: none - Sublime Text 3 used for development
 Main Driver File: ConvertPrefixToPostfix.java
 Commane Line Usage: $ java ConvertPrefixToPostfix <input_file>
 
+main driver file has been updated to now use a recursive fxn and the old algorithm has been commented out.
+
 Code output sent to output.txt
 
 Debug lines are commented out with "///"
@@ -16,7 +18,7 @@ Debug lines are commented out with "///"
 Files Included:
 ConvertPrefixToPostfix.class
 ConvertPrefixToPostfix.java
-Lab1_Report_NFoster.pdf
+Lab
 output.txt.Required_Input
 output.txt.user_input
 PrefixToPostfixConverter.class

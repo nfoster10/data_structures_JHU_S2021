@@ -15,19 +15,19 @@ input: **A+BC+C-BA
 output: ABC+*CBA-+*
 
 input: /A+BC+C*BA
-output: invalid equation
+output: invalid equation - error 3
 
 input: *-*-ABC+BA
-output: invalid equation
+output: invalid equation - error 3
 
 input: /+/A-BC-BA
-output: invalid equation
+output: invalid equation - error 3
 
 input: *$A+BC+C-BA
 output: ABC+$CBA-+*
 
 input: //A+B0-C+BA
-output: invalid equation
+output: invalid equation - error 2
 
 input: *$A^BC+C-BA
-output: invalid equation
+output: invalid equation - error 3

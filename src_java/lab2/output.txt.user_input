@@ -1,0 +1,36 @@
+
+input: aaaaaa
+output: invalid equation - error 3
+
+input: ------
+output: invalid equation - error 1
+
+input: a
+output: a
+
+input: -
+output: invalid equation - error 1
+
+input: -a
+output: invalid equation - error 3
+
+input: a-
+output: invalid equation - error 1
+
+input: --aa
+output: invalid equation - error 3
+
+input: aa--
+output: invalid equation - error 1
+
+input: --abc
+output: ab-c-
+
+input: -*+AB+$C-DEFG
+output: AB+CDE-$F+*G-
+
+input: -*+AB+$C-DEF
+output: invalid equation - error 3
+
+input: abababababababababababababababababababababa
+output: invalid equation - error 3

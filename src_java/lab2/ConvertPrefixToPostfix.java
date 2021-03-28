@@ -89,7 +89,9 @@ public class ConvertPrefixToPostfix
 		{
 			dataOutput.println("\ninput: " + inputPrefixEq);
 
-			if(converter.recursivePrefixToPostfix(inputPrefixEq, outputPostfix))
+			int error = converter.recursivePrefixToPostfix(inputPrefixEq, outputPostfix);
+
+			if(error == 0)
 			{
 				///System.out.println("\ninput: " + inputPrefixEq);
 				///System.out.println("output: " + outputPostfix.peak());
@@ -101,7 +103,7 @@ public class ConvertPrefixToPostfix
 				///System.out.println("\ninput: >" + inputPrefixEq + "<");
 				///System.out.println("output: invalid equation");
 				///dataOutput.println("\ninput: >" + inputPrefixEq + "<");
-				dataOutput.println("output: invalid equation");
+				dataOutput.println("output: invalid equation - error " + error);
 			}
 		}
 		catch (IOException e){
