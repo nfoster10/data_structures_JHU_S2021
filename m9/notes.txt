@@ -1,0 +1,10 @@
+
+
+
+preorder traversal means roots comes first
+
+inorder traversal means left root then right
+
+postorder traversal means root comes afterwards
+
+
