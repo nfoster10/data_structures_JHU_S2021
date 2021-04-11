@@ -39,14 +39,14 @@ public class PolynomialEvaluator
 						///System.out.println(inputPrefixEq.peak() + "-"+((int)newNode));
 					}
 				}
-				else if (inputPrefixEq.isEmpty() == false)
+				else if (inputPolynomial.isEmpty() == false)
 				{
 					///System.out.println("attempt convert");
-					evaluateHelper(inputPrefixEq);
+					evaluateHelper(inputPolynomial);
 					
 					inputPolynomial = new LinkedList();
 				}	
-				if(newNode == 65535) break;	
+				if(newNodeData == 65535) break;	
 			}
 		}
 		catch (IOException e)
@@ -59,9 +59,9 @@ public class PolynomialEvaluator
 	{
 		PolynomialCalculator calculator = new PolynomialCalculator(X,Y,Z);
 
-		try (PrintWriter dataOuput = new PrintWriter(new FileWriter("output.txt", true)))
+		try (PrintWriter dataOutput = new PrintWriter(new FileWriter("output.txt", true)))
 		{
-			dataOutput.println("\ninput: " + inputPrefixEq);
+			//dataOutput.println("\ninput: " + inputPrefixEq);
 
 			int [] polynomialValueList = calculator.process(inputPolynomial);
 

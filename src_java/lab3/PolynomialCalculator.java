@@ -23,6 +23,8 @@ public class PolynomialCalculator
 			output[i] = this.processHelper(inputPolynomial.head, 
 				xyz[i][0], xyz[i][1], xyz[i][0]);
 		}
+
+		return output;
 	}
 
 	private int processHelper(ListNode inputNode, int x, int y, int z)
@@ -31,26 +33,26 @@ public class PolynomialCalculator
 		{
 			return 0;
 		}
-		else if (Character.isDigit(inputNode.data) & 
+		else if (Character.isDigit(((Character)inputNode.data).charValue()) & 
 			inputNode.next != null &&
-			inputNode.next.data.equals(new Characater('x')))
+			inputNode.next.data.equals(new Character('x')))
 		{
-			return ((Character) inputNode.data).charValue().parseInt() * 
+			return Character.getNumericValue(((Character) inputNode.data).charValue()) * 
 				processHelper(inputNode.next, x,y,z);
 		}
 		else if (((Character)inputNode.data).equals(new Character('x')))
 		{
-			return Math.pow(x,((Character) inputNode.next.data).charValue().parseInt()) * 
+			return (int) Math.pow(x,Character.getNumericValue(((Character) inputNode.next.data).charValue())) * 
 				processHelper(inputNode.next.next, x,y,z);
 		}
 		else if (((Character)inputNode.data).equals(new Character('y')))
 		{
-			return Math.pow(y,((Character) inputNode.next.data).charValue().parseInt()) * 
+			return (int) Math.pow(y,Character.getNumericValue(((Character) inputNode.next.data).charValue())) * 
 				processHelper(inputNode.next.next, x,y,z);	
 		}
 		else if (((Character)inputNode.data).equals(new Character('z')))
 		{
-			return Math.pow(z,((Character) inputNode.next.data).charValue().parseInt()) + 
+			return (int) Math.pow(z,Character.getNumericValue(((Character) inputNode.next.data).charValue())) + 
 				processHelper(inputNode.next.next, x,y,z);		
 		}
 		else if (((Character)inputNode.data).equals(new Character('+')))
