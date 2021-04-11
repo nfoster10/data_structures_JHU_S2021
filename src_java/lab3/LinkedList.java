@@ -28,15 +28,19 @@ public class LinkedList
 		}
 		else if (index > 0)
 		{
-			ListNode movingNode = head;
+			///TODO: need to add check in case movingNode is null
+			ListNode beforeMovingNode = head;
 			for (int i = 0; i < index - 1; i++)
-				movingNode = movingNode.next();
-			///TODO: update movingNode
-
+				beforeMovingNode = beforeMovingNode.next;
+			
+			ListNode movingNode = beforeMovingNode.next;
+			beforeMovingNode.next = newNode;
+			newNode.next = movingNode; 
 		}
-		else ///TODO: update head node only
+		else
 		{
-
+			newNode.next = head;
+			head = newNode;
 		}
 
 
@@ -50,6 +54,5 @@ public class LinkedList
 	public boolean isEmpty()
 	{
 		return head == null;
-		///TODO: see fxn name
 	}
 }
