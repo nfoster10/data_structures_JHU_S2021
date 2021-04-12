@@ -55,4 +55,19 @@ public class LinkedList
 	{
 		return head == null;
 	}
+
+	public String toString()
+	{
+		String output = "";
+
+		ListNode currentNode = this.head;
+
+		while(currentNode != null)
+		{
+			output = output + ((Character)currentNode.data).charValue();
+			currentNode = currentNode.next;
+		}
+
+		return output;
+	}
 }

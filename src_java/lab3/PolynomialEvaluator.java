@@ -61,7 +61,8 @@ public class PolynomialEvaluator
 
 		try (PrintWriter dataOutput = new PrintWriter(new FileWriter("output.txt", true)))
 		{
-			//dataOutput.println("\ninput: " + inputPrefixEq);
+			///TODO: copy print below 
+			System.out.println("\ninput: " + inputPolynomial);
 
 			int [] polynomialValueList = calculator.process(inputPolynomial);
 
@@ -69,11 +70,13 @@ public class PolynomialEvaluator
 			{
 				if(polynomialValue != -1)
 				{
-					dataOutput.println("output: " + polynomialValue);
+					///dataOutput.println("output: " + polynomialValue);
+					System.out.println("output: " + polynomialValue);
 				}
 				else
 				{
-					dataOutput.println("output: invalid equation - error " + polynomialValue);
+					///dataOutput.println("output: invalid equation - error " + polynomialValue);
+					System.out.println("output: invalid equation - error " + polynomialValue);
 				}
 			}
 		}

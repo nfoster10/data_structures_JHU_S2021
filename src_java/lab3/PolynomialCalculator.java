@@ -29,7 +29,53 @@ public class PolynomialCalculator
 
 	private int processHelper(ListNode inputNode, int x, int y, int z)
 	{
-		if(inputNode == null)
+		///TODO: negative exponents or double digits not handled - use doubles and better checking
+		int sign = 1;
+		int digit = 0;
+
+		LinkedList evaluatedPolynomials = new LinkedList();
+
+		while(inputNode != null)
+		{
+			if(((Character)inputNode.data).equals(new Character('-')))
+			{
+				sign = -1;
+			}
+			else if (Character.isDigit(((Character)inputNode.data).charValue())) 
+			{
+				if (inputNode.next != null & Character.isDigit(((Character)inputNode.next.data).charValue()))
+				{
+					digit = 10*Character.getNumericValue(((Character) inputNode.data).charValue()) +
+						Character.getNumericValue(((Character) inputNode.next.data).charValue());
+					inputNode = inputNode.next;
+				}
+				else
+					digit = Character.getNumericValue(((Character) inputNode.data).charValue());
+
+				digit = sign * digit;
+				sign = 1;
+			}
+			else if (((Character)inputNode.data).equals(new Character('x')))
+			{
+				return 
+			}
+
+			if (((Character)inputNode.next.data).equals(new Character('x')))
+			{
+				//then digit is a coefficient
+				evaluatedPolynomials.insert( digit * recursiveProcessHelper(inputNode.next, x,y,z));
+					///might need to force to double or integer
+			}
+			else
+			{
+				//jump to next node until another coefficient is found
+				inputNode = inputNode.next;
+			}
+		}
+
+		///TODO: sum evaluated
+
+		/*if(inputNode == null)
 		{
 			return 0;
 		}
@@ -64,9 +110,28 @@ public class PolynomialCalculator
 			return -1 * processHelper(inputNode.next, x,y,z);
 		}
 		else
-			return -1;
+			return -1;*/
 
 		///TODO: deal with -1 error returns
+	}
+
+	private int recursiveProcessHelper(ListNode inputNode, int x, int y, int z)
+	{
+		///TODO: need to add processing for negative/double digits
+		if (((Character)inputNode.data).equals(new Character('x')))
+		{
+			return (int) Math.pow(x,Character.getNumericValue(((Character) inputNode.next.data).charValue())) * 
+				recursisveProcessHelper(inputNode.next.next, x,y,z);
+		}
+		else if (((Character)inputNode.data).equals(new Character('y')))
+		{
+			return (int) Math.pow(y,Character.getNumericValue(((Character) inputNode.next.data).charValue())) * 
+				recursiveProcessHelper(inputNode.next.next, x,y,z);	
+		}
+		else if (((Character)inputNode.data).equals(new Character('z')))
+		{
+			return (int) Math.pow(z,Character.getNumericValue(((Character) inputNode.next.data).charValue()));
+		}
 	}
 
 }
