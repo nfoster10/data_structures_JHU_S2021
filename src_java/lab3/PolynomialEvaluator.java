@@ -64,9 +64,9 @@ public class PolynomialEvaluator
 			///TODO: copy print below 
 			System.out.println("\ninput: " + inputPolynomial);
 
-			int [] polynomialValueList = calculator.process(inputPolynomial);
+			double [] polynomialValueList = calculator.process(inputPolynomial);
 
-			for (int polynomialValue : polynomialValueList)
+			for (double polynomialValue : polynomialValueList)
 			{
 				if(polynomialValue != -1)
 				{
