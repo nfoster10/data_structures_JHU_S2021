@@ -20,7 +20,7 @@ public class PolynomialCalculator
 
 		for (int i = 0; i < xyz.length; i++)
 		{
-			System.out.printf("x: %d, y: %d, z: %d\n", xyz[i][0], xyz[i][1], xyz[i][2]);
+			///System.out.printf("x: %d, y: %d, z: %d\n", xyz[i][0], xyz[i][1], xyz[i][2]);
 			output[i] = this.processHelper(inputPolynomial.head, 
 				xyz[i][0], xyz[i][1], xyz[i][2]);
 		}
@@ -30,7 +30,6 @@ public class PolynomialCalculator
 
 	private double processHelper(ListNode inputNode, int x, int y, int z)
 	{
-		///TODO: negative exponents or double digits not handled - use doubles and better checking
 		int sign = 1;
 		int digit = 0;
 
@@ -74,7 +73,6 @@ public class PolynomialCalculator
 					///System.out.println("x encountered");
 					//then digit is a coefficient
 					evaluatedPolynomials.insert(new Double((double)digit * recursiveProcessHelper(inputNode.next, x,y,z)), -1);
-						///might need to force to double or integer
 					///System.out.println("outside the recursive call");
 				}
 			}
@@ -83,7 +81,6 @@ public class PolynomialCalculator
 			///System.out.println("jumping to next node in list");
 		}
 
-		///TODO: sum evaluated
 		///System.out.println("outside the while loop");
 		ListNode currentNode = evaluatedPolynomials.head;
 
@@ -97,50 +94,10 @@ public class PolynomialCalculator
 		}
 
 		return output;
-
-		/*if(inputNode == null)
-		{
-			return 0;
-		}
-		else if (Character.isDigit(((Character)inputNode.data).charValue()) & 
-			inputNode.next != null &&
-			inputNode.next.data.equals(new Character('x')))
-		{
-			return Character.getNumericValue(((Character) inputNode.data).charValue()) * 
-				processHelper(inputNode.next, x,y,z);
-		}
-		else if (((Character)inputNode.data).equals(new Character('x')))
-		{
-			return (int) Math.pow(x,Character.getNumericValue(((Character) inputNode.next.data).charValue())) * 
-				processHelper(inputNode.next.next, x,y,z);
-		}
-		else if (((Character)inputNode.data).equals(new Character('y')))
-		{
-			return (int) Math.pow(y,Character.getNumericValue(((Character) inputNode.next.data).charValue())) * 
-				processHelper(inputNode.next.next, x,y,z);	
-		}
-		else if (((Character)inputNode.data).equals(new Character('z')))
-		{
-			return (int) Math.pow(z,Character.getNumericValue(((Character) inputNode.next.data).charValue())) + 
-				processHelper(inputNode.next.next, x,y,z);		
-		}
-		else if (((Character)inputNode.data).equals(new Character('+')))
-		{
-			return processHelper(inputNode.next, x,y,z);
-		}
-		else if (((Character)inputNode.data).equals(new Character('-')))
-		{
-			return -1 * processHelper(inputNode.next, x,y,z);
-		}
-		else
-			return -1;*/
-
-		///TODO: deal with -1 error returns
 	}
 
 	private double recursiveProcessHelper(ListNode inputNode, int x, int y, int z)
 	{
-		///TODO: need to add processing for negative/double digits
 		int sign = 1;
 		int digit = 0;
 
@@ -148,7 +105,7 @@ public class PolynomialCalculator
 
 		if (((Character)inputNode.data).equals(new Character('x')))
 		{
-			System.out.println("found an x");
+			///System.out.println("found an x");
 			if(((Character)inputNode.next.data).equals(new Character('-')))
 			{
 				sign = -1;
@@ -180,7 +137,7 @@ public class PolynomialCalculator
 				sign = 1;
 			}
 
-			System.out.printf("x^exp=%d^%d= %f\n", x,digit, Math.pow(x,digit));
+			///System.out.printf("x^exp=%d^%d= %f\n", x,digit, Math.pow(x,digit));
 			return Math.pow(x,digit) * 
 				recursiveProcessHelper(inputNode.next, x,y,z);
 		}
@@ -218,7 +175,7 @@ public class PolynomialCalculator
 				sign = 1;
 			}
 
-			System.out.printf("y^exp=%d^%d= %f\n", y,digit, Math.pow(y,digit));
+			///System.out.printf("y^exp=%d^%d= %f\n", y,digit, Math.pow(y,digit));
 			return Math.pow(y,digit) * 
 				recursiveProcessHelper(inputNode.next, x,y,z);
 		}
@@ -256,7 +213,7 @@ public class PolynomialCalculator
 				sign = 1;
 			}
 
-			System.out.printf("z^exp=%d^%d= %f\n", z,digit, Math.pow(z,digit));
+			///System.out.printf("z^exp=%d^%d= %f\n", z,digit, Math.pow(z,digit));
 			return Math.pow(z,digit);
 		}
 		else

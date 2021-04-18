@@ -2,11 +2,13 @@ public class LinkedList
 {
 	public ListNode head;
 	public ListNode tail;
+	public int length;
 
 	LinkedList()
 	{
 		head = null;
 		tail = null;
+		length = 0;
 	}
 
 	public void insert(Object newNodeData, int index)
@@ -42,7 +44,7 @@ public class LinkedList
 			head = newNode;
 		}
 
-
+		length++;
 	}
 
 	public void delete(int index)
