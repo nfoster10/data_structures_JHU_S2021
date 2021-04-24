@@ -3,14 +3,55 @@ import java.util.*;
 
 public class SortComparer
 {
+	protected int compares;
+	protected int exchanges;
+
 	public static void main (String [] args)
 	{
-		for (String inputFilePath : args)
+		///Object [] formattedInputFiles = new Object[args.length];
+		HeapSorter heapSorter = new HeapSorter();
+		TwoWayMergeSorter twoWayMergeSorter = new TwoWayMergeSorter();
+		int[] sortedInputFile = null;
+		String inputFilePath = null;
+
+		for(int i = 0; i< args.length; i++)
 		{
-			readfile(inputFilePath);
+			inputFilePath = args[i];
+
+			sortedInputFile = heapSorter.performHeapSort(readfile(inputFilePath));
+
+			sortedInputFile = twoWayMergeSorter.perform2WayMergeSort(readfile(inputFilePath));
+
+			System.out.println(inputFilePath);
+			System.out.println("\tHeapSorter");
+			System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",
+				heapSorter.getCompares(), heapSorter.getExchanges());
+			System.out.println("\tTwoWayMergeSorter");
+			System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",
+				twoWayMergeSorter.getCompares(), twoWayMergeSorter.getExchanges());
 		}
+		
+		//TwoWayMergeSorter.perform2WayMergeSort((int[][])formattedInputFiles);
+		//perform3WayMergeSort((int[][])formattedInputFiles);
+		//performNaturalMergeSort((int[][])formattedInputFiles);
 	}
 
+
+	public static void fileRandomizer(int [] formattedInputFiles)
+	{
+		//some random and sorted files are provided
+	}
+/*
+	private static int[] perform3WayMergeSort(int[][] formattedInputFiles)
+	{
+		int[] statistics = new int[3];
+		return statistics;
+	}
+	private static int[] performNaturalMergeSort(int[][] formattedInputFiles)
+	{
+		int[] statistics = new int[3];
+		return statistics;
+	}*/
 	private static int[] readfile(String inputFilePath)
 	{
 		File inputFile = null;
@@ -63,11 +104,12 @@ public class SortComparer
 
 		convertLinkedListToIntArray(rawData.head, adaptedData);
 
-		for(int i : adaptedData)
-			System.out.println(i);
+		///for(int i : adaptedData)
+			///System.out.println(i);
 
 		return adaptedData;
 	}
+	
 
 	private static void convertLinkedListToIntArray(ListNode inputNode, int[] adaptedData)
 	{
@@ -88,5 +130,14 @@ public class SortComparer
 			currerntInt++;
 			inputNode = inputNode.next;
 		}
+	}
+
+	public int getCompares()
+	{
+		return compares;
+	}
+	public int getExchanges()
+	{
+		return exchanges;
 	}
 }
