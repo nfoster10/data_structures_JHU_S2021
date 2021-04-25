@@ -1,6 +1,7 @@
 public class NaturalMergeSorter extends SortComparer
 {
 	private int[] b;
+	private Comparable[] aux;
 
 	NaturalMergeSorter()
 	{
@@ -15,91 +16,99 @@ public class NaturalMergeSorter extends SortComparer
 		compares = 0;
 		exchanges = 0;
 
-		//naturalMergeSort(inputFile);
-		sort(inputFile);
+		Integer[] inputFileAsInteger = new Integer[inputFile.length];
+		for(int i = 0; i < inputFile.length; i++)
+			inputFileAsInteger[i] = Integer.valueOf(inputFile[i]);
+
+		sort(inputFileAsInteger);
+
+		for(int i = 0; i < inputFile.length; i++)
+			inputFile[i] = inputFileAsInteger[i].intValue();
 
 		return inputFile;
 	}
 
+	//code below from:
+	/*
+	https://stackoverflow.com/questions/37243200/java-natural-merge-sort-implementation
+	*/
 
 
-
-
-
-	 public static void sort(Comparable[] a) {
-    aux = new Comparable[a.length];
-    sort(a, 0, a.length - 1);
-  }
-
-  public static boolean isSorted(Comparable[] a) {
-    for (int i = 1; i < a.length; i += 1) {
-      if (a[i - 1].compareTo(a[i]) < 0) {
-        return false;
-      }
-    }
-    return true;
-  }
-
-  private static void sort(Comparable[] a, int lo, int hi) {
-    int i = lo;
-    int j = 0;
-    int mid = 0;
-    int az = 0;
-
-    while (true) {
-      i = 0;
-      System.out.println("outter");
-      while (i < a.length) {
-        System.out.println("inner 1");
-        if (i == a.length - 1) {
-          break;
-        } else if (a[i].compareTo(a[i + 1]) < 0) {
-          break;
+    public void sort(Comparable[] a) {
+        aux = new Comparable[a.length];
+        int i;
+        int j;
+        int k;
+        while (true) {                  // merge pass
+            i = 0;
+            while(true) {               // find, merge pair of runs
+                j = i;                  // find left run
+                while (++j < a.length) {
+                	this.compares++; //Added N. Foster
+                    if (a[j-1].compareTo(a[j]) > 0)
+                        break;
+                }
+                this.compares++; //Added N. Foster
+                if(j == a.length){      // if only one run left
+                	this.compares++; //Added N. Foster
+                    if(i == 0)          //   if done return
+                        return;
+                    else                //   else end of merge pass
+                        break;
+                }
+                k = j;                  // find right run
+                while (++k < a.length) {
+                	this.compares++; //Added N. Foster
+                    if (a[k-1].compareTo(a[k]) > 0){
+                        break;
+                    }
+                }
+                Merge(a, i, j, k);      // merge runs
+                i = k;
+                this.compares++; //Added N. Foster
+                if(i == a.length)       // if end of merge pass, break
+                    break;
+            }
         }
-        i++;
-      }
+    }
 
-      j = i + 1;
-
-      while (j < a.length) {
-        System.out.println("inner 2");
-        if (j == a.length - 1) {
-          break;
-        } else if (a[j].compareTo(a[j + 1]) < 0) {
-          break;
+    // merge left and right runs
+    // ll = start of left run
+    // rr = start of right run == end of left run
+    // ee = end of right run
+    public void Merge(Comparable[] a, int ll, int rr, int ee) {
+        int i = ll;
+        int j = rr;
+        int k;
+        for (k = ll; k < ee; k++)
+            aux[k] = a[k];
+        k = ll;
+        while(true){
+            // if left element <= right element
+            this.compares++; //Added N. Foster
+            if (aux[i].compareTo(aux[j]) <= 0) {
+            	this.exchanges++; //Added N. Foster
+                a[k++] = aux[i++];      // copy left element
+                this.compares++; //Added N. Foster
+                if(i == rr){            // if end of left run
+                    while(j < ee)       //   copy rest of right run
+                        a[k++] = aux[j++];
+                return;                 //   and return
+                }
+            } else {
+            	this.exchanges++; //Added N. Foster
+                a[k++] = aux[j++];      // copy right element
+                this.compares++; //Added N. Foster
+                if(j == ee){            // if end of right run
+                    while(i < rr){      //   copy rest of left run
+                        a[k++] = aux[i++];
+                    }
+                return;                 //   and return
+                }
+            }
         }
-        j++;
-      }
-      mid = lo + (j - lo) / 2;
-      Merge(a, lo, mid, j);
-      lo = 0;
-
-      if (isSorted(a)) {
-        break;
-      }
-    }
-  }
-
-  public static void Merge(Comparable[] a, int lo, int mid, int hi) {
-    int i = lo;
-    int j = mid + 1;
-
-    for (int k = lo; k <= hi; k++) {
-      aux[k] = a[k];
     }
 
-    for (int k = lo; k <= hi; k++) {
-      if (i > mid) {
-        a[k] = aux[j++];
-      } else if (j > hi) {
-        a[k] = aux[i++];
-      } else if (aux[i].compareTo(aux[j]) < 0) {
-        a[k] = aux[j++];
-      } else {
-        a[k] = aux[i++];
-      }
-    }
-  }
 
 
 	//everything below from:

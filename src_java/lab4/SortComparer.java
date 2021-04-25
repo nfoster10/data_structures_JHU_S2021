@@ -21,7 +21,7 @@ public class SortComparer
 		{
 
 			inputFilePath = args[i];
-			System.out.println(inputFilePath);
+			System.out.println(i + ". " + inputFilePath);
 
 			sortedInputFile = heapSorter.performHeapSort(readfile(inputFilePath));
 
