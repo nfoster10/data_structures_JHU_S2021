@@ -1,252 +1,270 @@
 0. InputFiles/asc1K.dat
-	HeapSorter - execution time(us): 3689.269
+	HeapSorter - execution time(us): 5743.417
 		Compares: 20416		Exchanges: 9708
-	TwoWayMergeSorter - execution time(us): 3190.241
+	TwoWayMergeSorter - execution time(us): 7434.484
 		Compares: 7043		Exchanges: 5044
-	ThreeWayMergeSorter - execution time(us): 3855.719
+	ThreeWayMergeSorter - execution time(us): 4645.463
 		Compares: 8234		Exchanges: 4352
-	NaturalMergeSorter - execution time(us): 363.589
+	NaturalMergeSorter - execution time(us): 360.226
 		Compares: 1001		Exchanges: 0
 1. InputFiles/asc2K.dat
-	HeapSorter - execution time(us): 732.629
+	HeapSorter - execution time(us): 661.552
 		Compares: 44600		Exchanges: 21300
-	TwoWayMergeSorter - execution time(us): 579.103
+	TwoWayMergeSorter - execution time(us): 792.177
 		Compares: 15087		Exchanges: 11088
-	ThreeWayMergeSorter - execution time(us): 3787.620
+	ThreeWayMergeSorter - execution time(us): 3838.749
 		Compares: 18080		Exchanges: 9476
-	NaturalMergeSorter - execution time(us): 265.651
+	NaturalMergeSorter - execution time(us): 269.938
 		Compares: 2001		Exchanges: 0
 2. InputFiles/asc5K.dat
-	HeapSorter - execution time(us): 1735.621
+	HeapSorter - execution time(us): 1732.830
 		Compares: 126864		Exchanges: 60932
-	TwoWayMergeSorter - execution time(us): 1364.319
+	TwoWayMergeSorter - execution time(us): 1986.055
 		Compares: 42003		Exchanges: 32004
-	ThreeWayMergeSorter - execution time(us): 1658.683
+	ThreeWayMergeSorter - execution time(us): 1690.254
 		Compares: 49609		Exchanges: 26562
-	NaturalMergeSorter - execution time(us): 663.728
+	NaturalMergeSorter - execution time(us): 656.952
 		Compares: 5001		Exchanges: 0
 3. InputFiles/asc10K.dat
-	HeapSorter - execution time(us): 3997.182
+	HeapSorter - execution time(us): 16851.137
 		Compares: 273912		Exchanges: 131956
-	TwoWayMergeSorter - execution time(us): 4170.058
+	TwoWayMergeSorter - execution time(us): 1962.843
 		Compares: 89007		Exchanges: 69008
-	ThreeWayMergeSorter - execution time(us): 3493.293
+	ThreeWayMergeSorter - execution time(us): 3511.585
 		Compares: 102282		Exchanges: 56989
-	NaturalMergeSorter - execution time(us): 1668.484
+	NaturalMergeSorter - execution time(us): 1304.742
 		Compares: 10001		Exchanges: 0
 4. InputFiles/asc20K.dat
-	HeapSorter - execution time(us): 16531.621
+	HeapSorter - execution time(us): 7864.785
 		Compares: 585756		Exchanges: 282878
-	TwoWayMergeSorter - execution time(us): 8721.919
+	TwoWayMergeSorter - execution time(us): 15332.093
 		Compares: 188015		Exchanges: 148016
-	ThreeWayMergeSorter - execution time(us): 6902.123
+	ThreeWayMergeSorter - execution time(us): 17766.150
 		Compares: 222779		Exchanges: 123652
-	NaturalMergeSorter - execution time(us): 2715.951
+	NaturalMergeSorter - execution time(us): 2768.695
 		Compares: 20001		Exchanges: 0
 5. InputFiles/asc50.dat
-	HeapSorter - execution time(us): 16.275
+	HeapSorter - execution time(us): 16.938
 		Compares: 590		Exchanges: 270
-	TwoWayMergeSorter - execution time(us): 12.725
+	TwoWayMergeSorter - execution time(us): 12.475
 		Compares: 252		Exchanges: 153
-	ThreeWayMergeSorter - execution time(us): 20.900
+	ThreeWayMergeSorter - execution time(us): 27.338
 		Compares: 280		Exchanges: 126
-	NaturalMergeSorter - execution time(us): 11.450
+	NaturalMergeSorter - execution time(us): 11.613
 		Compares: 51		Exchanges: 0
 6. InputFiles/asc500.dat
-	HeapSorter - execution time(us): 150.501
+	HeapSorter - execution time(us): 150.763
 		Compares: 9208		Exchanges: 4354
-	TwoWayMergeSorter - execution time(us): 115.576
+	TwoWayMergeSorter - execution time(us): 93.388
 		Compares: 3271		Exchanges: 2272
-	ThreeWayMergeSorter - execution time(us): 161.326
+	ThreeWayMergeSorter - execution time(us): 121.326
 		Compares: 3925		Exchanges: 1986
-	NaturalMergeSorter - execution time(us): 73.663
+	NaturalMergeSorter - execution time(us): 62.375
 		Compares: 501		Exchanges: 0
 7. InputFiles/dup1K.dat
-	HeapSorter - execution time(us): 319.776
+	HeapSorter - execution time(us): 325.826
 		Compares: 19162		Exchanges: 9081
-	TwoWayMergeSorter - execution time(us): 290.852
+	TwoWayMergeSorter - execution time(us): 3425.209
 		Compares: 10669		Exchanges: 8670
-	ThreeWayMergeSorter - execution time(us): 394.452
+	ThreeWayMergeSorter - execution time(us): 313.863
 		Compares: 12805		Exchanges: 5865
-	NaturalMergeSorter - execution time(us): 4414.396
+	NaturalMergeSorter - execution time(us): 16114.958
 		Compares: 27402		Exchanges: 8205
 8. InputFiles/dup2K.dat
-	HeapSorter - execution time(us): 661.791
+	HeapSorter - execution time(us): 683.676
 		Compares: 42342		Exchanges: 20171
-	TwoWayMergeSorter - execution time(us): 705.303
+	TwoWayMergeSorter - execution time(us): 657.426
 		Compares: 23416		Exchanges: 19417
-	ThreeWayMergeSorter - execution time(us): 823.241
+	ThreeWayMergeSorter - execution time(us): 656.402
 		Compares: 28546		Exchanges: 13085
-	NaturalMergeSorter - execution time(us): 20477.828
+	NaturalMergeSorter - execution time(us): 8816.350
 		Compares: 60795		Exchanges: 18418
 9. InputFiles/dup5K.dat
-	HeapSorter - execution time(us): 10230.426
+	HeapSorter - execution time(us): 1743.492
 		Compares: 119316		Exchanges: 57158
-	TwoWayMergeSorter - execution time(us): 9490.010
+	TwoWayMergeSorter - execution time(us): 1879.818
 		Compares: 65323		Exchanges: 55324
-	ThreeWayMergeSorter - execution time(us): 2169.523
+	ThreeWayMergeSorter - execution time(us): 2001.118
 		Compares: 79903		Exchanges: 36914
-	NaturalMergeSorter - execution time(us): 17564.264
+	NaturalMergeSorter - execution time(us): 17832.338
 		Compares: 178611		Exchanges: 54314
 10. InputFiles/dup10K.dat
-	HeapSorter - execution time(us): 12062.523
+	HeapSorter - execution time(us): 11878.571
 		Compares: 258170		Exchanges: 124085
-	TwoWayMergeSorter - execution time(us): 7928.252
+	TwoWayMergeSorter - execution time(us): 4935.102
 		Compares: 140412		Exchanges: 120413
-	ThreeWayMergeSorter - execution time(us): 20735.467
+	ThreeWayMergeSorter - execution time(us): 3683.173
 		Compares: 169435		Exchanges: 79368
-	NaturalMergeSorter - execution time(us): 11818.309
+	NaturalMergeSorter - execution time(us): 15317.394
 		Compares: 387386		Exchanges: 118739
 11. InputFiles/dup20K.dat
-	HeapSorter - execution time(us): 7790.151
+	HeapSorter - execution time(us): 6617.219
 		Compares: 556566		Exchanges: 268283
-	TwoWayMergeSorter - execution time(us): 7888.277
+	TwoWayMergeSorter - execution time(us): 10924.431
 		Compares: 300890		Exchanges: 260891
-	ThreeWayMergeSorter - execution time(us): 17639.787
+	ThreeWayMergeSorter - execution time(us): 7180.758
 		Compares: 368023		Exchanges: 172551
-	NaturalMergeSorter - execution time(us): 68506.406
+	NaturalMergeSorter - execution time(us): 25630.061
 		Compares: 834293		Exchanges: 257205
 12. InputFiles/dup500.dat
-	HeapSorter - execution time(us): 174.489
+	HeapSorter - execution time(us): 129.088
 		Compares: 8564		Exchanges: 4032
-	TwoWayMergeSorter - execution time(us): 134.176
+	TwoWayMergeSorter - execution time(us): 144.975
 		Compares: 4841		Exchanges: 3842
-	ThreeWayMergeSorter - execution time(us): 253.614
+	ThreeWayMergeSorter - execution time(us): 143.800
 		Compares: 5853		Exchanges: 2651
-	NaturalMergeSorter - execution time(us): 1320.357
+	NaturalMergeSorter - execution time(us): 1374.191
 		Compares: 12197		Exchanges: 3608
-13. InputFiles/ran1K.dat
-	HeapSorter - execution time(us): 325.477
+13. InputFiles/InputNatFoster1.dat
+	HeapSorter - execution time(us): 3.738
+		Compares: 40		Exchanges: 16
+	TwoWayMergeSorter - execution time(us): 4.200
+		Compares: 27		Exchanges: 12
+	ThreeWayMergeSorter - execution time(us): 8.087
+		Compares: 35		Exchanges: 13
+	NaturalMergeSorter - execution time(us): 19.662
+		Compares: 68		Exchanges: 12
+14. InputFiles/InputNatFoster2.dat
+	HeapSorter - execution time(us): 3.937
+		Compares: 40		Exchanges: 16
+	TwoWayMergeSorter - execution time(us): 8.725
+		Compares: 27		Exchanges: 12
+	ThreeWayMergeSorter - execution time(us): 9.175
+		Compares: 35		Exchanges: 13
+	NaturalMergeSorter - execution time(us): 15.187
+		Compares: 68		Exchanges: 12
+15. InputFiles/ran1K.dat
+	HeapSorter - execution time(us): 179.213
 		Compares: 19072		Exchanges: 9036
-	TwoWayMergeSorter - execution time(us): 294.989
+	TwoWayMergeSorter - execution time(us): 361.288
 		Compares: 10704		Exchanges: 8705
-	ThreeWayMergeSorter - execution time(us): 332.064
+	ThreeWayMergeSorter - execution time(us): 267.676
 		Compares: 12812		Exchanges: 5868
-	NaturalMergeSorter - execution time(us): 2509.787
+	NaturalMergeSorter - execution time(us): 2570.595
 		Compares: 27406		Exchanges: 8211
-14. InputFiles/ran2K.dat
-	HeapSorter - execution time(us): 528.803
+16. InputFiles/ran2K.dat
+	HeapSorter - execution time(us): 377.301
 		Compares: 42376		Exchanges: 20188
-	TwoWayMergeSorter - execution time(us): 627.416
+	TwoWayMergeSorter - execution time(us): 824.052
 		Compares: 23435		Exchanges: 19436
-	ThreeWayMergeSorter - execution time(us): 669.679
+	ThreeWayMergeSorter - execution time(us): 592.502
 		Compares: 28580		Exchanges: 13099
-	NaturalMergeSorter - execution time(us): 5955.118
+	NaturalMergeSorter - execution time(us): 5496.891
 		Compares: 60929		Exchanges: 18457
-15. InputFiles/ran5K.dat
-	HeapSorter - execution time(us): 1135.305
+17. InputFiles/ran5K.dat
+	HeapSorter - execution time(us): 1075.266
 		Compares: 119290		Exchanges: 57145
-	TwoWayMergeSorter - execution time(us): 1778.009
+	TwoWayMergeSorter - execution time(us): 2143.556
 		Compares: 65159		Exchanges: 55160
-	ThreeWayMergeSorter - execution time(us): 1765.733
+	ThreeWayMergeSorter - execution time(us): 1648.729
 		Compares: 79937		Exchanges: 36933
-	NaturalMergeSorter - execution time(us): 13126.791
+	NaturalMergeSorter - execution time(us): 13471.225
 		Compares: 178595		Exchanges: 54313
-16. InputFiles/ran10K.dat
-	HeapSorter - execution time(us): 2315.187
+18. InputFiles/ran10K.dat
+	HeapSorter - execution time(us): 2265.532
 		Compares: 258176		Exchanges: 124088
-	TwoWayMergeSorter - execution time(us): 3916.507
+	TwoWayMergeSorter - execution time(us): 7204.720
 		Compares: 140482		Exchanges: 120483
-	ThreeWayMergeSorter - execution time(us): 3601.843
+	ThreeWayMergeSorter - execution time(us): 4104.799
 		Compares: 169589		Exchanges: 79376
-	NaturalMergeSorter - execution time(us): 43367.914
+	NaturalMergeSorter - execution time(us): 29777.508
 		Compares: 387640		Exchanges: 118867
-17. InputFiles/ran20K.dat
-	HeapSorter - execution time(us): 5898.080
+19. InputFiles/ran20K.dat
+	HeapSorter - execution time(us): 4906.289
 		Compares: 556902		Exchanges: 268451
-	TwoWayMergeSorter - execution time(us): 7820.715
+	TwoWayMergeSorter - execution time(us): 9863.265
 		Compares: 300993		Exchanges: 260994
-	ThreeWayMergeSorter - execution time(us): 8705.956
+	ThreeWayMergeSorter - execution time(us): 7275.270
 		Compares: 368160		Exchanges: 172693
-	NaturalMergeSorter - execution time(us): 66525.695
+	NaturalMergeSorter - execution time(us): 62298.500
 		Compares: 834819		Exchanges: 257376
-18. InputFiles/ran50.dat
-	HeapSorter - execution time(us): 15.800
+20. InputFiles/ran50.dat
+	HeapSorter - execution time(us): 15.587
 		Compares: 1230		Exchanges: 565
-	TwoWayMergeSorter - execution time(us): 24.850
+	TwoWayMergeSorter - execution time(us): 62.625
 		Compares: 676		Exchanges: 477
-	ThreeWayMergeSorter - execution time(us): 46.688
+	ThreeWayMergeSorter - execution time(us): 30.938
 		Compares: 796		Exchanges: 361
-	NaturalMergeSorter - execution time(us): 156.188
+	NaturalMergeSorter - execution time(us): 165.288
 		Compares: 1368		Exchanges: 362
-19. InputFiles/ran500.dat
-	HeapSorter - execution time(us): 83.513
+21. InputFiles/ran500.dat
+	HeapSorter - execution time(us): 83.538
 		Compares: 8594		Exchanges: 4047
-	TwoWayMergeSorter - execution time(us): 149.275
+	TwoWayMergeSorter - execution time(us): 186.576
 		Compares: 4853		Exchanges: 3854
-	ThreeWayMergeSorter - execution time(us): 150.439
+	ThreeWayMergeSorter - execution time(us): 135.012
 		Compares: 5847		Exchanges: 2645
-	NaturalMergeSorter - execution time(us): 1207.568
+	NaturalMergeSorter - execution time(us): 1130.528
 		Compares: 12173		Exchanges: 3588
-20. InputFiles/README for Resources Directory Lab 4 nput Files.docx
-	HeapSorter - execution time(us): 14.325
+22. InputFiles/README for Resources Directory Lab 4 nput Files.docx
+	HeapSorter - execution time(us): 14.550
 		Compares: 1058		Exchanges: 485
-	TwoWayMergeSorter - execution time(us): 23.150
+	TwoWayMergeSorter - execution time(us): 66.787
 		Compares: 627		Exchanges: 452
-	ThreeWayMergeSorter - execution time(us): 31.350
+	ThreeWayMergeSorter - execution time(us): 30.313
 		Compares: 745		Exchanges: 321
-	NaturalMergeSorter - execution time(us): 186.263
+	NaturalMergeSorter - execution time(us): 182.713
 		Compares: 1549		Exchanges: 425
-21. InputFiles/rev1K.dat
-	HeapSorter - execution time(us): 156.076
+23. InputFiles/rev1K.dat
+	HeapSorter - execution time(us): 156.763
 		Compares: 17632		Exchanges: 8316
-	TwoWayMergeSorter - execution time(us): 240.451
+	TwoWayMergeSorter - execution time(us): 334.739
 		Compares: 6931		Exchanges: 4932
-	ThreeWayMergeSorter - execution time(us): 222.976
+	ThreeWayMergeSorter - execution time(us): 201.913
 		Compares: 8355		Exchanges: 4436
-	NaturalMergeSorter - execution time(us): 2809.814
+	NaturalMergeSorter - execution time(us): 2614.320
 		Compares: 22857		Exchanges: 4932
-22. InputFiles/rev2K.dat
-	HeapSorter - execution time(us): 342.189
+24. InputFiles/rev2K.dat
+	HeapSorter - execution time(us): 340.976
 		Compares: 39416		Exchanges: 18708
-	TwoWayMergeSorter - execution time(us): 513.052
+	TwoWayMergeSorter - execution time(us): 779.615
 		Compares: 14863		Exchanges: 10864
-	ThreeWayMergeSorter - execution time(us): 478.178
+	ThreeWayMergeSorter - execution time(us): 434.926
 		Compares: 18460		Exchanges: 9848
-	NaturalMergeSorter - execution time(us): 5309.114
+	NaturalMergeSorter - execution time(us): 5475.703
 		Compares: 49720		Exchanges: 10864
-23. InputFiles/rev5K.dat
-	HeapSorter - execution time(us): 937.667
+25. InputFiles/rev5K.dat
+	HeapSorter - execution time(us): 934.765
 		Compares: 111872		Exchanges: 53436
-	TwoWayMergeSorter - execution time(us): 1349.482
+	TwoWayMergeSorter - execution time(us): 1989.105
 		Compares: 39803		Exchanges: 29804
-	ThreeWayMergeSorter - execution time(us): 1251.706
+	ThreeWayMergeSorter - execution time(us): 1125.628
 		Compares: 50315		Exchanges: 27345
-	NaturalMergeSorter - execution time(us): 24201.184
+	NaturalMergeSorter - execution time(us): 19224.191
 		Compares: 139606		Exchanges: 29804
-24. InputFiles/rev10K.dat
-	HeapSorter - execution time(us): 2342.637
+26. InputFiles/rev10K.dat
+	HeapSorter - execution time(us): 2031.594
 		Compares: 243392		Exchanges: 116696
-	TwoWayMergeSorter - execution time(us): 2903.965
+	TwoWayMergeSorter - execution time(us): 4079.461
 		Compares: 84607		Exchanges: 64608
-	ThreeWayMergeSorter - execution time(us): 2698.776
+	ThreeWayMergeSorter - execution time(us): 2512.469
 		Compares: 104991		Exchanges: 58383
-	NaturalMergeSorter - execution time(us): 25196.389
+	NaturalMergeSorter - execution time(us): 30567.523
 		Compares: 299213		Exchanges: 64608
-25. InputFiles/rev20K.dat
-	HeapSorter - execution time(us): 4370.122
+27. InputFiles/rev20K.dat
+	HeapSorter - execution time(us): 4349.762
 		Compares: 528668		Exchanges: 254334
-	TwoWayMergeSorter - execution time(us): 6314.194
+	TwoWayMergeSorter - execution time(us): 5035.551
 		Compares: 179215		Exchanges: 139216
-	ThreeWayMergeSorter - execution time(us): 6377.294
+	ThreeWayMergeSorter - execution time(us): 4650.664
 		Compares: 224097		Exchanges: 125951
-	NaturalMergeSorter - execution time(us): 49706.672
+	NaturalMergeSorter - execution time(us): 64205.156
 		Compares: 638428		Exchanges: 139216
-26. InputFiles/rev50.dat
-	HeapSorter - execution time(us): 8.650
+28. InputFiles/rev50.dat
+	HeapSorter - execution time(us): 7.838
 		Compares: 464		Exchanges: 207
-	TwoWayMergeSorter - execution time(us): 12.750
+	TwoWayMergeSorter - execution time(us): 12.638
 		Compares: 232		Exchanges: 133
-	ThreeWayMergeSorter - execution time(us): 19.600
+	ThreeWayMergeSorter - execution time(us): 19.312
 		Compares: 289		Exchanges: 133
-	NaturalMergeSorter - execution time(us): 97.988
+	NaturalMergeSorter - execution time(us): 96.363
 		Compares: 715		Exchanges: 133
-27. InputFiles/rev500-1.dat
-	HeapSorter - execution time(us): 72.600
+29. InputFiles/rev500-1.dat
+	HeapSorter - execution time(us): 72.563
 		Compares: 7852		Exchanges: 3676
-	TwoWayMergeSorter - execution time(us): 166.376
+	TwoWayMergeSorter - execution time(us): 97.338
 		Compares: 3215		Exchanges: 2216
-	ThreeWayMergeSorter - execution time(us): 118.738
+	ThreeWayMergeSorter - execution time(us): 146.775
 		Compares: 3927		Exchanges: 2021
-	NaturalMergeSorter - execution time(us): 1405.095
+	NaturalMergeSorter - execution time(us): 1271.641
 		Compares: 10426		Exchanges: 2216

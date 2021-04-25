@@ -7,6 +7,14 @@ public class ThreeWayMergeSorter extends SortComparer
 		deltaTime = 0;
 	}
 
+
+	/*
+	inputs - an input integer array to be sorted
+	precondtion - N/A
+	process - sort input with 3 way merge sort and gather statistics
+	postcondition - file sorted
+	outputs - the sorted file in an integer array
+	*/
 	public int[] perform3WayMergeSort(int[] inputFile)
 	{
 		fileRandomizer(inputFile);

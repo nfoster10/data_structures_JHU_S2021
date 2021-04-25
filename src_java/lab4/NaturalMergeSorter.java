@@ -10,6 +10,14 @@ public class NaturalMergeSorter extends SortComparer
 		deltaTime = 0;
 	}
 
+
+	/*
+	inputs - an input integer array to be sorted
+	precondtion - N/A
+	process - sort input with natural merge sort and gather statistics
+	postcondition - file sorted
+	outputs - the sorted file in an integer array
+	*/
 	public int[] performNaturalMergeSort(int[] inputFile)
 	{
 		fileRandomizer(inputFile);
@@ -35,7 +43,6 @@ public class NaturalMergeSorter extends SortComparer
 	/*
 	https://stackoverflow.com/questions/37243200/java-natural-merge-sort-implementation
 	*/
-
 
     public void sort(Comparable[] a) {
         aux = new Comparable[a.length];
@@ -111,63 +118,4 @@ public class NaturalMergeSorter extends SortComparer
             }
         }
     }
-
-
-
-	//everything below from:
-	/*
-	http://www.home.hs-karlsruhe.de/~pach0003/informatik_1/aufgaben/en/doc/src-html/de/hska/java/exercises/sorting/NaturalMergeSort.html#line.31
-	*//*
-	  private void  naturalMergeSort(int [] a) {
-                    int left = 0;
-                    int right = a.length - 1;
-                    boolean sorted = false;
-                    int l = 0;
-                    int r = right;
-                    
-                    do {
-                            sorted = true;
-                            left = 0;
-                            
-                            while (left < right) {
-                                    l = left;
-                                    while (l < right &&  a[l] <= a[l + 1]) {
-                                            l++;
-                                    }
-                                    r = l + 1;
-                                    while (r == right - 1 || r < right && a[r] <= a[r + 1]) {
-                                            r++;
-                                    }
-                                    if (r <= right) {
-                                            merge(a, left, l, r);
-                                            sorted = false;
-                                    }
-                                    left = r + 1;
-                            }
-                    } while (! sorted);
-                    
-            }
-    
-            /**
-             * Merges the sorted sequence
-             *  a[links]...a[mitte] with a[mitte+1]..a[rechts]
-             *  into a sorted sequence
-             *  a[links] .. a[rechts].
-             *//*
-        private void merge(int[] a, int left, int middle, int right) {
-            int l = left;
-            int r = middle + 1;
-    
-            for (int i = left; i <= right; i++) {
-                if (r > right || (l <= middle && a[l] <= a[r])) {
-                    b[i] = a[l++];
-                } else if (l > middle || (r <= right && a[r] <= a[l])) {
-                    b[i] = a[r++];
-                }
-            }
-    
-            for (int i = left; i <= right; i++) {
-                a[i] = b[i];
-            }
-        }*/
 }

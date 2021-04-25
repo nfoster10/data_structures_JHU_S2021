@@ -1,5 +1,6 @@
 public class TwoWayMergeSorter extends SortComparer
 {
+	//the constructor
 	TwoWayMergeSorter()
 	{
 		compares = 0;
@@ -7,6 +8,13 @@ public class TwoWayMergeSorter extends SortComparer
 		deltaTime = 0;
 	}
 
+	/*
+	inputs - an input integer array to be sorted
+	precondtion - N/A
+	process - sort input with 2 way merge sort and gather statistics
+	postcondition - file sorted
+	outputs - the sorted file in an integer array
+	*/
 	public int[] perform2WayMergeSort(int[] inputFile)
 	{
 		fileRandomizer(inputFile);

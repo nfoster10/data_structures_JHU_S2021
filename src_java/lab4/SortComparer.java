@@ -1,15 +1,29 @@
 import java.io.*;
 import java.util.*;
 
+/*
+The SortComparer reads from files given from the command line and performs 4 sorts.
+The sorts compared are heap, 2-way merge, 3-way merge and natural merge.
+A summary of the sorts including the number of exchanges and time to execute the sorts
+are then given as output as well as the sorted file from each sort in a separate file.
+
+Note: professionally in industry, it is considered bad practice to write code that must be explained
+with comments. Well-written code should not need comments to explain how it works. Fxns
+and variables should now be clearly named to show their purpose. In large projects, this creates
+issues with code maintenance as now changes must be made in even more places to stay consistent.
+Commenting code however was more useful when programming languages had restrictions on 
+fxn and variable names that required frequently cryptic shorthand.
+*/
+
 public class SortComparer
 {
 	protected int compares;
 	protected int exchanges;
 	protected long deltaTime;
 
+	//main program driver
 	public static void main (String [] args)
 	{
-		///Object [] formattedInputFiles = new Object[args.length];
 		HeapSorter heapSorter = new HeapSorter();
 		TwoWayMergeSorter twoWayMergeSorter = new TwoWayMergeSorter();
 		ThreeWayMergeSorter threeWayMergeSorter = new ThreeWayMergeSorter();
@@ -78,12 +92,26 @@ public class SortComparer
 		}
 	}
 
-
+	/*
+	inputs - an input file in the form of an integer array
+	precondtion - N/A
+	process - shuffle the data contained in the array
+	postcondition - input integer array has been shuffled
+	outputs - N/A
+	*/
 	public static void fileRandomizer(int [] formattedInputFiles)
 	{
-		//some random and sorted files are provided
+		//NOT IMPLEMENTED
+		//not needed since able to robustly read the input files
 	}
 
+	/*
+	inputs - an input path to a file to be read
+	precondtion - the file exists and has a list of numbersh
+	process - read the file and return in the form of an integer array ignoring non-digits
+	postcondition - N/A
+	outputs - an integer array of the input file
+	*/
 	private static int[] readfile(String inputFilePath)
 	{
 		File inputFile = null;
@@ -142,7 +170,13 @@ public class SortComparer
 		return adaptedData;
 	}
 	
-
+	/*
+	inputs - a current inputnode to be processed and an output array
+	precondtion - numbers are separated by a '@'
+	process - fill adapted array from the given linked list
+	postcondition - N/A
+	outputs - N/A
+	*/
 	private static void convertLinkedListToIntArray(ListNode inputNode, int[] adaptedData)
 	{
 		int data = 0;
@@ -164,15 +198,37 @@ public class SortComparer
 		}
 	}
 
+	/*
+	inputs - N/A
+	precondtion - N/A
+	process - N/A
+	postcondition - N/A
+	outputs - compares, the number of compares made by the last sort
+	*/
 	public int getCompares()
 	{
 		return compares;
 	}
+
+	/*
+	inputs - N/A
+	precondtion - N/A
+	process - N/A
+	postcondition - N/A
+	outputs - exchanges, the number of exchanges made by the last sort
+	*/
 	public int getExchanges()
 	{
 		return exchanges;
 	}
 
+	/*
+	inputs - N/A
+	precondtion - N/A
+	process - N/A
+	postcondition - N/A
+	outputs - deltatTime, the time delta from the last sort in microseconds (us)
+	*/
 	public float getDeltaTime()
 	{
 		return (float)deltaTime / 1000;

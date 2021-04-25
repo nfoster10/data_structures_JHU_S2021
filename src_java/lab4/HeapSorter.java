@@ -7,6 +7,14 @@ public class HeapSorter extends SortComparer
 		deltaTime = 0;
 	}
 
+
+	/*
+	inputs - an input integer array to be sorted
+	precondtion - N/A
+	process - sort input with heap sort and gather statistics
+	postcondition - file sorted
+	outputs - the sorted file in an integer array
+	*/
 	public int[] performHeapSort(int[] inputFile)
 	{
 		fileRandomizer(inputFile);

@@ -1,3 +1,4 @@
+//defines a singly linked linked list
 public class LinkedList
 {
 	public ListNode head;
@@ -11,6 +12,13 @@ public class LinkedList
 		length = 0;
 	}
 
+	/*
+	inputs - new node and where in the list to put the data
+	precondtion - the index exists
+	process - the new node data is inserted into the list at the desired index of end if -1
+	postcondition - linked list length increased by 1
+	outputs - N/A
+	*/
 	public void insert(Object newNodeData, int index)
 	{
 		ListNode newNode = new ListNode(newNodeData);
@@ -47,6 +55,13 @@ public class LinkedList
 		length++;
 	}
 
+	/*
+	inputs - index to delete
+	precondtion - index exists
+	process - remove links to index to delete
+	postcondition - linked list length decrease by 1
+	outputs - N/A
+	*/
 	public void delete(int index)
 	{
 		ListNode nodePriorToRemove = head;
@@ -71,11 +86,25 @@ public class LinkedList
 		}
 	}
 
+	/*
+	inputs - N/A
+	precondtion - N/A
+	process - check if head is null
+	postcondition - N/A
+	outputs - empty status
+	*/
 	public boolean isEmpty()
 	{
 		return head == null;
 	}
 
+	/*
+	inputs - N/A
+	precondtion - N/A
+	process - create a string representation of the linked list
+	postcondition - N/A
+	outputs - string representation of list
+	*/
 	public String toString()
 	{
 		String output = "";
