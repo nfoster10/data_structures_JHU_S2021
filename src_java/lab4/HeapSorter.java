@@ -14,9 +14,9 @@ public class HeapSorter extends SortComparer
 		compares = 0;
 		exchanges = 0;
 
-		deltaTime = System.currentTimeMillis();
+		deltaTime = System.nanoTime();
 		heapSort(inputFile);
-		deltaTime -= System.currentTimeMillis();
+		deltaTime = System.nanoTime() - deltaTime;
 
 		return inputFile;
 	}

@@ -5,7 +5,7 @@ public class SortComparer
 {
 	protected int compares;
 	protected int exchanges;
-	protected float deltaTime;
+	protected long deltaTime;
 
 	public static void main (String [] args)
 	{
@@ -56,19 +56,19 @@ public class SortComparer
 					naturalMergeSorterOutput.println(data);
 
 				///System.out.println("\tHeapSorter");
-				summaryOutput.printf("\tHeapSorter - execution time(ms): %f\n", heapSorter.getDeltaTime());
+				summaryOutput.printf("\tHeapSorter - execution time(us): %.3f\n", heapSorter.getDeltaTime());
 				///System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",heapSorter.getCompares(), heapSorter.getExchanges());
 				summaryOutput.printf("\t\tCompares: %d\t\tExchanges: %d\n",heapSorter.getCompares(), heapSorter.getExchanges());
 				///System.out.println("\tTwoWayMergeSorter");
-				summaryOutput.printf("\tTwoWayMergeSorter - execution time(ms): %f\n", twoWayMergeSorter.getDeltaTime());
+				summaryOutput.printf("\tTwoWayMergeSorter - execution time(us): %.3f\n", twoWayMergeSorter.getDeltaTime());
 				///System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",twoWayMergeSorter.getCompares(), twoWayMergeSorter.getExchanges());
 				summaryOutput.printf("\t\tCompares: %d\t\tExchanges: %d\n",twoWayMergeSorter.getCompares(), twoWayMergeSorter.getExchanges());
 				///System.out.println("\tThreeWayMergeSorter");
-				summaryOutput.printf("\tThreeWayMergeSorter - execution time(ms): %f\n", threeWayMergeSorter.getDeltaTime());
+				summaryOutput.printf("\tThreeWayMergeSorter - execution time(us): %.3f\n", threeWayMergeSorter.getDeltaTime());
 				///System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",threeWayMergeSorter.getCompares(), threeWayMergeSorter.getExchanges());
 				summaryOutput.printf("\t\tCompares: %d\t\tExchanges: %d\n",threeWayMergeSorter.getCompares(), threeWayMergeSorter.getExchanges());
 				///System.out.println("\tNaturalMergeSorter");
-				summaryOutput.printf("\tNaturalMergeSorter - execution time(ms): %f\n", naturalMergeSorter.getDeltaTime());
+				summaryOutput.printf("\tNaturalMergeSorter - execution time(us): %.3f\n", naturalMergeSorter.getDeltaTime());
 				///System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",naturalMergeSorter.getCompares(), naturalMergeSorter.getExchanges());
 				summaryOutput.printf("\t\tCompares: %d\t\tExchanges: %d\n",naturalMergeSorter.getCompares(), naturalMergeSorter.getExchanges());
 			}
@@ -175,6 +175,6 @@ public class SortComparer
 
 	public float getDeltaTime()
 	{
-		return deltaTime;
+		return (float)deltaTime / 1000;
 	}
 }

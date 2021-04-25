@@ -21,9 +21,9 @@ public class NaturalMergeSorter extends SortComparer
 		for(int i = 0; i < inputFile.length; i++)
 			inputFileAsInteger[i] = Integer.valueOf(inputFile[i]);
 
-		this.deltaTime = System.currentTimeMillis();
+		this.deltaTime = System.nanoTime();
 		sort(inputFileAsInteger);
-		this.deltaTime -= System.currentTimeMillis();
+		this.deltaTime = System.nanoTime() - deltaTime;
 
 		for(int i = 0; i < inputFile.length; i++)
 			inputFile[i] = inputFileAsInteger[i].intValue();

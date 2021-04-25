@@ -14,9 +14,9 @@ public class TwoWayMergeSorter extends SortComparer
 		compares = 0;
 		exchanges = 0;
 
-		deltaTime = System.currentTimeMillis();
+		deltaTime = System.nanoTime();
 		sort(inputFile, 0, inputFile.length - 1);
-		deltaTime -= System.currentTimeMillis();
+		deltaTime = System.nanoTime() - deltaTime;
 
 		return inputFile;
 	}

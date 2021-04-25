@@ -16,9 +16,9 @@ public class ThreeWayMergeSorter extends SortComparer
 		Integer[] inputFileAsInteger = new Integer[inputFile.length];
 		for(int i = 0; i < inputFile.length; i++)
 			inputFileAsInteger[i] = Integer.valueOf(inputFile[i]);
-		deltaTime = System.currentTimeMillis();
+		deltaTime = System.nanoTime();
 		mergeSort3Way(inputFileAsInteger);
-		deltaTime -= System.currentTimeMillis();
+		deltaTime = System.nanoTime() - deltaTime;
 
 		for(int i = 0; i < inputFile.length; i++)
 			inputFile[i] = inputFileAsInteger[i].intValue();		
