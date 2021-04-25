@@ -5,6 +5,7 @@ public class SortComparer
 {
 	protected int compares;
 	protected int exchanges;
+	protected float deltaTime;
 
 	public static void main (String [] args)
 	{
@@ -19,30 +20,61 @@ public class SortComparer
 
 		for(int i = 0; i< args.length; i++)
 		{
-
 			inputFilePath = args[i];
-			System.out.println(i + ". " + inputFilePath);
 
-			sortedInputFile = heapSorter.performHeapSort(readfile(inputFilePath));
+			try(PrintWriter summaryOutput = new PrintWriter(new FileWriter("Summary.txt",true));
+				PrintWriter heapSorterOutput = new PrintWriter(new FileWriter(inputFilePath + ".HeapSorted.txt",true));
+				PrintWriter twoWayMergeSorterOutput = new PrintWriter(new FileWriter(inputFilePath + ".TwoWayMergeSorted.txt",true));
+				PrintWriter threeWayMergeSorterOutput = new PrintWriter(new FileWriter(inputFilePath + ".ThreeWayMergeSorted.txt",true));
+				PrintWriter naturalMergeSorterOutput = new PrintWriter(new FileWriter(inputFilePath + ".NaturalMergeSorted.txt",true))){
 
-			sortedInputFile = twoWayMergeSorter.perform2WayMergeSort(readfile(inputFilePath));
+				///System.out.println(i + ". " + inputFilePath);
+				summaryOutput.println(i + ". " + inputFilePath);
 
-			sortedInputFile = threeWayMergeSorter.perform3WayMergeSort(readfile(inputFilePath));
+				sortedInputFile = heapSorter.performHeapSort(readfile(inputFilePath));
+				heapSorterOutput.printf("Compares: %d\t\tExchanges: %d\n",heapSorter.getCompares(), heapSorter.getExchanges());
+				heapSorterOutput.println("Sorted Data:");
+				for(int data : sortedInputFile)
+					heapSorterOutput.println(data);
 
-			sortedInputFile = naturalMergeSorter.performNaturalMergeSort(readfile(inputFilePath));
+				sortedInputFile = twoWayMergeSorter.perform2WayMergeSort(readfile(inputFilePath));
+				twoWayMergeSorterOutput.printf("Compares: %d\t\tExchanges: %d\n",twoWayMergeSorter.getCompares(), twoWayMergeSorter.getExchanges());
+				twoWayMergeSorterOutput.println("Sorted Data:");
+				for(int data : sortedInputFile)
+					twoWayMergeSorterOutput.println(data);
 
-			System.out.println("\tHeapSorter");
-			System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",
-				heapSorter.getCompares(), heapSorter.getExchanges());
-			System.out.println("\tTwoWayMergeSorter");
-			System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",
-				twoWayMergeSorter.getCompares(), twoWayMergeSorter.getExchanges());
-			System.out.println("\tThreeWayMergeSorter");
-			System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",
-				threeWayMergeSorter.getCompares(), threeWayMergeSorter.getExchanges());
-			System.out.println("\tNaturalMergeSorter");
-			System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",
-				naturalMergeSorter.getCompares(), naturalMergeSorter.getExchanges());
+				sortedInputFile = threeWayMergeSorter.perform3WayMergeSort(readfile(inputFilePath));
+				threeWayMergeSorterOutput.printf("Compares: %d\t\tExchanges: %d\n",threeWayMergeSorter.getCompares(), threeWayMergeSorter.getExchanges());
+				threeWayMergeSorterOutput.println("Sorted Data:");
+				for(int data : sortedInputFile)
+					threeWayMergeSorterOutput.println(data);
+
+				sortedInputFile = naturalMergeSorter.performNaturalMergeSort(readfile(inputFilePath));
+				naturalMergeSorterOutput.printf("Compares: %d\t\tExchanges: %d\n",naturalMergeSorter.getCompares(), naturalMergeSorter.getExchanges());
+				naturalMergeSorterOutput.println("Sorted Data:");
+				for(int data : sortedInputFile)
+					naturalMergeSorterOutput.println(data);
+
+				///System.out.println("\tHeapSorter");
+				summaryOutput.printf("\tHeapSorter - execution time(ms): %f\n", heapSorter.getDeltaTime());
+				///System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",heapSorter.getCompares(), heapSorter.getExchanges());
+				summaryOutput.printf("\t\tCompares: %d\t\tExchanges: %d\n",heapSorter.getCompares(), heapSorter.getExchanges());
+				///System.out.println("\tTwoWayMergeSorter");
+				summaryOutput.printf("\tTwoWayMergeSorter - execution time(ms): %f\n", twoWayMergeSorter.getDeltaTime());
+				///System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",twoWayMergeSorter.getCompares(), twoWayMergeSorter.getExchanges());
+				summaryOutput.printf("\t\tCompares: %d\t\tExchanges: %d\n",twoWayMergeSorter.getCompares(), twoWayMergeSorter.getExchanges());
+				///System.out.println("\tThreeWayMergeSorter");
+				summaryOutput.printf("\tThreeWayMergeSorter - execution time(ms): %f\n", threeWayMergeSorter.getDeltaTime());
+				///System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",threeWayMergeSorter.getCompares(), threeWayMergeSorter.getExchanges());
+				summaryOutput.printf("\t\tCompares: %d\t\tExchanges: %d\n",threeWayMergeSorter.getCompares(), threeWayMergeSorter.getExchanges());
+				///System.out.println("\tNaturalMergeSorter");
+				summaryOutput.printf("\tNaturalMergeSorter - execution time(ms): %f\n", naturalMergeSorter.getDeltaTime());
+				///System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",naturalMergeSorter.getCompares(), naturalMergeSorter.getExchanges());
+				summaryOutput.printf("\t\tCompares: %d\t\tExchanges: %d\n",naturalMergeSorter.getCompares(), naturalMergeSorter.getExchanges());
+			}
+			catch (IOException e){
+				///System.out.println(e);
+			}
 		}
 	}
 
@@ -139,5 +171,10 @@ public class SortComparer
 	public int getExchanges()
 	{
 		return exchanges;
+	}
+
+	public float getDeltaTime()
+	{
+		return deltaTime;
 	}
 }

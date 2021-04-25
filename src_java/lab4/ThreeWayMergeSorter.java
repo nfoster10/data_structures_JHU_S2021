@@ -4,6 +4,7 @@ public class ThreeWayMergeSorter extends SortComparer
 	{
 		compares = 0;
 		exchanges = 0;
+		deltaTime = 0;
 	}
 
 	public int[] perform3WayMergeSort(int[] inputFile)
@@ -15,14 +16,20 @@ public class ThreeWayMergeSorter extends SortComparer
 		Integer[] inputFileAsInteger = new Integer[inputFile.length];
 		for(int i = 0; i < inputFile.length; i++)
 			inputFileAsInteger[i] = Integer.valueOf(inputFile[i]);
-
+		deltaTime = System.currentTimeMillis();
 		mergeSort3Way(inputFileAsInteger);
+		deltaTime -= System.currentTimeMillis();
 
 		for(int i = 0; i < inputFile.length; i++)
 			inputFile[i] = inputFileAsInteger[i].intValue();		
 
 		return inputFile;
 	}
+
+	//code below from:
+	/*
+	https://www.geeksforgeeks.org/3-way-merge-sort/
+	*/
 
 	// Function  for 3-way merge sort process
     public void mergeSort3Way(Integer[] gArray)

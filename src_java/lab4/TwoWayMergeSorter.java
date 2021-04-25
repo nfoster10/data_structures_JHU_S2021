@@ -4,6 +4,7 @@ public class TwoWayMergeSorter extends SortComparer
 	{
 		compares = 0;
 		exchanges = 0;
+		deltaTime = 0;
 	}
 
 	public int[] perform2WayMergeSort(int[] inputFile)
@@ -13,7 +14,9 @@ public class TwoWayMergeSorter extends SortComparer
 		compares = 0;
 		exchanges = 0;
 
+		deltaTime = System.currentTimeMillis();
 		sort(inputFile, 0, inputFile.length - 1);
+		deltaTime -= System.currentTimeMillis();
 
 		return inputFile;
 	}

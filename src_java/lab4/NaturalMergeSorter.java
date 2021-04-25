@@ -7,6 +7,7 @@ public class NaturalMergeSorter extends SortComparer
 	{
 		compares = 0;
 		exchanges = 0;
+		deltaTime = 0;
 	}
 
 	public int[] performNaturalMergeSort(int[] inputFile)
@@ -20,7 +21,9 @@ public class NaturalMergeSorter extends SortComparer
 		for(int i = 0; i < inputFile.length; i++)
 			inputFileAsInteger[i] = Integer.valueOf(inputFile[i]);
 
+		this.deltaTime = System.currentTimeMillis();
 		sort(inputFileAsInteger);
+		this.deltaTime -= System.currentTimeMillis();
 
 		for(int i = 0; i < inputFile.length; i++)
 			inputFile[i] = inputFileAsInteger[i].intValue();

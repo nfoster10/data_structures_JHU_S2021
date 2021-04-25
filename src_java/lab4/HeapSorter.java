@@ -4,20 +4,20 @@ public class HeapSorter extends SortComparer
 	{
 		compares = 0;
 		exchanges = 0;
+		deltaTime = 0;
 	}
 
 	public int[] performHeapSort(int[] inputFile)
 	{
-		///int[] statistics = new int[3];
-
 		fileRandomizer(inputFile);
 
 		compares = 0;
 		exchanges = 0;
 
+		deltaTime = System.currentTimeMillis();
 		heapSort(inputFile);
+		deltaTime -= System.currentTimeMillis();
 
-		///return statistics;
 		return inputFile;
 	}
 
