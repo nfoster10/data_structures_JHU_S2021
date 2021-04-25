@@ -11,29 +11,39 @@ public class SortComparer
 		///Object [] formattedInputFiles = new Object[args.length];
 		HeapSorter heapSorter = new HeapSorter();
 		TwoWayMergeSorter twoWayMergeSorter = new TwoWayMergeSorter();
+		ThreeWayMergeSorter threeWayMergeSorter = new ThreeWayMergeSorter();
+		NaturalMergeSorter naturalMergeSorter = new NaturalMergeSorter();
+
 		int[] sortedInputFile = null;
 		String inputFilePath = null;
 
 		for(int i = 0; i< args.length; i++)
 		{
+
 			inputFilePath = args[i];
+			System.out.println(inputFilePath);
 
 			sortedInputFile = heapSorter.performHeapSort(readfile(inputFilePath));
 
 			sortedInputFile = twoWayMergeSorter.perform2WayMergeSort(readfile(inputFilePath));
 
-			System.out.println(inputFilePath);
+			sortedInputFile = threeWayMergeSorter.perform3WayMergeSort(readfile(inputFilePath));
+
+			sortedInputFile = naturalMergeSorter.performNaturalMergeSort(readfile(inputFilePath));
+
 			System.out.println("\tHeapSorter");
 			System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",
 				heapSorter.getCompares(), heapSorter.getExchanges());
 			System.out.println("\tTwoWayMergeSorter");
 			System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",
 				twoWayMergeSorter.getCompares(), twoWayMergeSorter.getExchanges());
+			System.out.println("\tThreeWayMergeSorter");
+			System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",
+				threeWayMergeSorter.getCompares(), threeWayMergeSorter.getExchanges());
+			System.out.println("\tNaturalMergeSorter");
+			System.out.printf("\t\tCompares: %d\t\tExchanges: %d\n",
+				naturalMergeSorter.getCompares(), naturalMergeSorter.getExchanges());
 		}
-		
-		//TwoWayMergeSorter.perform2WayMergeSort((int[][])formattedInputFiles);
-		//perform3WayMergeSort((int[][])formattedInputFiles);
-		//performNaturalMergeSort((int[][])formattedInputFiles);
 	}
 
 
@@ -41,17 +51,7 @@ public class SortComparer
 	{
 		//some random and sorted files are provided
 	}
-/*
-	private static int[] perform3WayMergeSort(int[][] formattedInputFiles)
-	{
-		int[] statistics = new int[3];
-		return statistics;
-	}
-	private static int[] performNaturalMergeSort(int[][] formattedInputFiles)
-	{
-		int[] statistics = new int[3];
-		return statistics;
-	}*/
+
 	private static int[] readfile(String inputFilePath)
 	{
 		File inputFile = null;
