@@ -16,7 +16,10 @@ Debug lines are commented out with "///"
 
 Files Included:
 	README
-	Summary.txt
+	Summary.txt.ALL_INPUTS
+	Lab4ReportNFoster.odt
+	Sort_Data.ods
+	
 	HeapSorter.class
 	HeapSorter.java
 	LinkedList.class
@@ -31,6 +34,7 @@ Files Included:
 	ThreeWayMergeSorter.java
 	TwoWayMergeSorter.class
 	TwoWayMergeSorter.java
+	InputFiles_ALL_SORTED
 	InputFiles/
 		 asc10K.dat
 		 asc10K.dat.HeapSorted.txt
